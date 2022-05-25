@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "npx prettier --write . && vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "react": "^18.0.0",
