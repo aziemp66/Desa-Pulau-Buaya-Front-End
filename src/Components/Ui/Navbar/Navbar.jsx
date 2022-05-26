@@ -9,7 +9,7 @@ import {
   AiOutlineArrowUp,
 } from "react-icons/ai";
 import { GiVillage } from "react-icons/gi";
-import { IoMdArrowDropright } from "react-icons/io";
+import { IoMdArrowDropupCircle } from "react-icons/io";
 
 const Navbar = ({ toggleShow, show }) => {
   const location = useLocation();
@@ -24,22 +24,18 @@ const Navbar = ({ toggleShow, show }) => {
           className={`flex flex-row w-screen h-20 py-5 px-8 ${
             location.pathname === "/"
               ? "bg-transparent"
-              : "bg-slate-200 border-b-2"
+              : "bg-slate-100 border-b-2"
           }`}
         >
           <div
             className="flex justify-center items-center"
             onClick={() => toggleShow((prev) => !prev)}
           >
-            {show ? (
-              <IoMdArrowDropright className="w-10 h-10 text-blue-500 hover:text-blue-600 active:text-blue-700 cursor-pointer lg:-rotate-180 transition-all duration-500" />
-            ) : (
-              <div className="w-10 h-10 flex flex-col justify-center items-center gap-1 cursor-pointer group">
-                <div className="bg-blue-500 h-1 w-4/5 rounded-lg group-hover:bg-blue-600  group-active:bg-blue-700"></div>
-                <div className="bg-blue-500 h-1 w-4/5 rounded-lg group-hover:bg-blue-600 group-active:bg-blue-700"></div>
-                <div className="bg-blue-500 h-1 w-4/5 rounded-lg group-hover:bg-blue-600 group-active:bg-blue-700"></div>
-              </div>
-            )}
+            <IoMdArrowDropupCircle
+              className={`w-10 h-10 text-blue-500 hover:text-blue-600 active:text-blue-700 cursor-pointer ${
+                show ? "lg:-rotate-90" : "rotate-180 lg:rotate-90"
+              } transition-all`}
+            />
           </div>
           <div className="flex justify-center items-center w-full">
             <h1 className="text-blue-500 text-xl font-inter font-bold">

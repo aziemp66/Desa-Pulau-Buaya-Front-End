@@ -15,7 +15,7 @@ const Sidebar = ({ show, toggle }) => {
         show && "lg:translate-x-0 lg:relative"
       }  transition-all`}
     >
-      <div className="w-80 py-[21px] border-b-2 border-slate-300 px-6 flex justify-between items-center border-r-2">
+      <div className="w-80 py-[21px] border-b-2 border-slate-200 px-6 flex justify-between items-center border-r-2">
         <h2 className="text-blue-500 font-inter font-bold text-3xl text-center ">
           Main Menu
         </h2>

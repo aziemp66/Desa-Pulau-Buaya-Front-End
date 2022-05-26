@@ -7,9 +7,9 @@ import Home from "./Pages/Home/Home";
 function App() {
   const [show, setShow] = useState(false);
   return (
-    <div className=" flex flex-1 ">
+    <div className="flex flex-1">
       <Sidebar toggleShow={setShow} show={show} />
-      <div>
+      <div className="">
         <Navbar toggleShow={setShow} show={show} />
         <Routes>
           <Route path="/" element={<Home />} />
