@@ -14,7 +14,7 @@ const Navbar = ({ toggleShow, show }) => {
   return (
     <div className="flex flex-row ">
       <div className="flex flex-col">
-        <div className="flex flex-row w-screen h-20 bg-slate-100 py-5 px-2 border-b-2">
+        <div className="flex flex-row w-screen h-20 bg-slate-100 py-5 px-8 border-b-2">
           <div
             className="flex justify-center items-center"
             onClick={() => toggleShow((prev) => !prev)}
