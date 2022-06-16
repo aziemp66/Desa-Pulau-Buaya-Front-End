@@ -6,7 +6,7 @@ import {
   AiOutlineHistory,
   AiOutlineClose,
 } from "react-icons/ai";
-import { GiVillage, GiHamburgerMenu } from "react-icons/gi";
+import { GiVillage } from "react-icons/gi";
 
 const Sidebar = ({ show, toggleShow }) => {
   const toggle = () => {
@@ -16,7 +16,7 @@ const Sidebar = ({ show, toggleShow }) => {
     <div
       className={`hidden lg:block lg:flex-col bg-slate-100 h-screen gap-32 items-center ${
         !show && "lg:-translate-x-full lg"
-      }  transition-all duration-500 ease-in-out`}
+      } transition-all duration-500 ease-in-out`}
     >
       <div className="w-80 py-[21px] border-b-2 border-slate-200 px-6 border-r-2 ">
         <div className="text-blue-500 font-inter font-bold text-3xl text-center flex justify-between items-center">
