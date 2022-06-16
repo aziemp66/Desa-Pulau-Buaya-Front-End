@@ -8,16 +8,14 @@ import {
   AiOutlineHistory,
   AiOutlineArrowUp,
 } from "react-icons/ai";
-import { GiVillage } from "react-icons/gi";
+import { GiVillage, GiHamburgerMenu } from "react-icons/gi";
 import { IoMdArrowDropupCircle } from "react-icons/io";
 
 const Navbar = ({ toggleShow, show }) => {
   const location = useLocation();
   return (
     <div
-      className={`flex flex-row ${
-        location.pathname === "/" ? "lg:absolute" : ""
-      }`}
+      className={`flex flex-row ${location.pathname === "/" && "lg:absolute"}`}
     >
       <div className="flex flex-col">
         <div
@@ -28,12 +26,14 @@ const Navbar = ({ toggleShow, show }) => {
           }`}
         >
           <div
-            className="flex justify-center items-center"
+            className={`flex justify-center items-center ${
+              show && "lg:hidden"
+            }`}
             onClick={() => toggleShow((prev) => !prev)}
           >
-            <IoMdArrowDropupCircle
+            <GiHamburgerMenu
               className={`w-10 h-10 text-blue-500 hover:text-blue-600 active:text-blue-700 cursor-pointer ${
-                show ? "lg:-rotate-90" : "rotate-180 lg:rotate-90"
+                show && "lg:hidden"
               } transition-all`}
             />
           </div>
