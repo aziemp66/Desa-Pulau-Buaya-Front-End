@@ -22,13 +22,13 @@ const Navbar = ({ toggleShow, show }) => {
           }`}
         >
           <div
-            className={`flex justify-center items-center ${
-              show && "lg:invisible"
-            }`}
+            className={`flex justify-center items-center`}
             onClick={() => toggleShow((prev) => !prev)}
           >
             <GiHamburgerMenu
-              className={`w-10 h-10 text-blue-500 hover:text-blue-600 active:text-blue-700 cursor-pointer transition-all animate-fade`}
+              className={`w-10 h-10 text-blue-500 hover:text-blue-600 active:text-blue-700 cursor-pointer  transition-all duration-300 ease-in-out ${
+                show && "lg:text-transparent"
+              }`}
             />
           </div>
           <div className="flex justify-center items-center w-full">
