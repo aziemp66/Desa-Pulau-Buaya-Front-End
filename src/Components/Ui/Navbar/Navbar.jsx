@@ -2,20 +2,16 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Fade } from "react-reveal";
 
-import {
-  AiFillHome,
-  AiFillInfoCircle,
-  AiOutlineHistory,
-  AiOutlineArrowUp,
-} from "react-icons/ai";
+import { AiFillHome, AiFillInfoCircle, AiOutlineHistory } from "react-icons/ai";
 import { GiVillage, GiHamburgerMenu } from "react-icons/gi";
-import { IoMdArrowDropupCircle } from "react-icons/io";
 
 const Navbar = ({ toggleShow, show }) => {
   const location = useLocation();
   return (
     <div
-      className={`flex flex-row ${location.pathname === "/" && "lg:absolute"}`}
+      className={`flex flex-row ${
+        location.pathname === "/" && "lg:bg-transparent"
+      }`}
     >
       <div className="flex flex-col">
         <div
@@ -27,14 +23,12 @@ const Navbar = ({ toggleShow, show }) => {
         >
           <div
             className={`flex justify-center items-center ${
-              show && "lg:hidden"
+              show && "lg:invisible"
             }`}
             onClick={() => toggleShow((prev) => !prev)}
           >
             <GiHamburgerMenu
-              className={`w-10 h-10 text-blue-500 hover:text-blue-600 active:text-blue-700 cursor-pointer ${
-                show && "lg:hidden"
-              } transition-all`}
+              className={`w-10 h-10 text-blue-500 hover:text-blue-600 active:text-blue-700 cursor-pointer transition-all animate-fade`}
             />
           </div>
           <div className="flex justify-center items-center w-full">

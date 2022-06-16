@@ -7,9 +7,13 @@ import Home from "./Pages/Home/Home";
 function App() {
   const [show, setShow] = useState(false);
   return (
-    <div className="flex flex-1">
+    <div className="flex">
       <Sidebar toggleShow={setShow} show={show} />
-      <div className="">
+      <div
+        className={`transition-all duration-500 ease-in-out ${
+          !show && "lg:-translate-x-80"
+        }`}
+      >
         <Navbar toggleShow={setShow} show={show} />
         <Routes>
           <Route path="/" element={<Home />} />
