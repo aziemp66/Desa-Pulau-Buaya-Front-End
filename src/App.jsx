@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Ui/Navbar/Navbar";
 import Sidebar from "./Components/Ui/Sidebar/Sidebar";
+
 import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import History from "./Pages/History/History";
+import HeadInfo from "./Pages/HeadInfo/HeadInfo";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -17,9 +21,9 @@ function App() {
         <Navbar toggleShow={setShow} show={show} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<div>About</div>} />
-          <Route path="/history" element={<div>History</div>} />
-          <Route path="/head-info" element={<div>Head Info</div>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/head-info" element={<HeadInfo />} />
         </Routes>
       </div>
     </div>
