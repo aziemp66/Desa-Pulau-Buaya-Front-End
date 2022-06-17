@@ -14,8 +14,8 @@ const Sidebar = ({ show, toggleShow }) => {
   };
   return (
     <div
-      className={`hidden sticky top-0 lg:block lg:flex-col bg-slate-100 h-screen gap-32 items-center ${
-        !show && "lg:-translate-x-full lg"
+      className={`hidden lg:block sticky top-0 bg-slate-100 h-screen gap-32 ${
+        !show && "lg:-translate-x-full"
       } transition-all duration-500 ease-in-out`}
     >
       <div className="w-80 py-[21px] border-b-2 border-slate-200 px-6 border-r-2 ">
