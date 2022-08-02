@@ -38,19 +38,31 @@ const Sidebar = ({ show, toggleShow }) => {
           <Link to={"/about"}>
             <li className="hover:text-blue-600 active:text-blue-600 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
               <AiFillInfoCircle />
-              <span>Tentang</span>
+              <span>Profil Desa</span>
             </li>
           </Link>
           <Link to={"/history"}>
             <li className="hover:text-blue-600 active:text-blue-600 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
               <AiOutlineHistory />
-              <span>Sejarah</span>
+              <span>Sejarah Desa</span>
             </li>
           </Link>
           <Link to={"/head-info"}>
             <li className="hover:text-blue-600 active:text-blue-600 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
               <GiVillage />
               <span>Info Kepala Desa</span>
+            </li>
+          </Link>
+          <Link to={"/marketplace"}>
+            <li className="hover:text-blue-600 active:text-blue-600 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+              <GiVillage />
+              <span>Marketplace</span>
+            </li>
+          </Link>
+          <Link to={"/statistics"}>
+            <li className="hover:text-blue-600 active:text-blue-600 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+              <GiVillage />
+              <span>Data Statistik</span>
             </li>
           </Link>
         </ul>

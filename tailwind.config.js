@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "noto-sans": ["Noto Sans"],
+        inter: ["Inter"],
       },
       colors: {
         "blue-dark": "#2b6474",
