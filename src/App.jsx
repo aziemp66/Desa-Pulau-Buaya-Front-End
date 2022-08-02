@@ -19,7 +19,7 @@ function App() {
           !show && "lg:-translate-x-80"
         }`}
       >
-        {/* <Navbar toggleShow={setShow} show={show} /> */}
+        <Navbar toggleShow={setShow} show={show} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
