@@ -32,7 +32,7 @@ const Navbar = ({ toggleShow, show }) => {
             />
           </div>
           <div className="flex justify-center items-center w-full">
-            <h1 className="text-blue-500 text-xl font-inter font-bold">
+            <h1 className="text-blue-500 text-xl font-noto-sans font-bold">
               Desa Pulau Buaya
             </h1>
           </div>
@@ -45,25 +45,25 @@ const Navbar = ({ toggleShow, show }) => {
             >
               <ul className="flex flex-col cursor-pointer ">
                 <Link to={"/"}>
-                  <li className="text-blue-500 font-inter font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+                  <li className="text-blue-500 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
                     <AiFillHome />
                     <span>Home</span>
                   </li>
                 </Link>
                 <Link to={"/about"}>
-                  <li className="text-blue-500 font-inter font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+                  <li className="text-blue-500 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
                     <AiFillInfoCircle />
                     <span>Tentang</span>
                   </li>
                 </Link>
                 <Link to={"/history"}>
-                  <li className="text-blue-500 font-inter font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+                  <li className="text-blue-500 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
                     <AiOutlineHistory />
                     <span>Sejarah</span>
                   </li>
                 </Link>
                 <Link to={"/head-info"}>
-                  <li className="text-blue-500 font-inter font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+                  <li className="text-blue-500 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
                     <GiVillage />
                     <span>Info Kepala Desa</span>
                   </li>
