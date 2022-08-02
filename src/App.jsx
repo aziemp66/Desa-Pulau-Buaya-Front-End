@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import History from "./Pages/History/History";
 import HeadInfo from "./Pages/HeadInfo/HeadInfo";
+import Marketplace from "./Pages/Marketplace/Marketplace";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -24,6 +25,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/history" element={<History />} />
           <Route path="/head-info" element={<HeadInfo />} />
+          <Route path="/marketplace" element={<Marketplace />} />
         </Routes>
       </div>
     </div>
