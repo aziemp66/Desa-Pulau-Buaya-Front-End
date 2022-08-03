@@ -20,7 +20,7 @@ const card = () => {
       to={link}
     >
       <div
-        className={`flex-1 bg-red bg-cover bg-no-repeat bg-center bg-[image:url('${props.image}')]`}
+        className={`flex-1 w-full h-full bg-red bg-cover bg-no-repeat bg-center bg-[image:url('${props.image}')]`}
       />
       <div className="flex-none h-14 w-full p-2 bg-white">
         <p className="text-sm text-blue-dark font-semibold font-noto-sans">

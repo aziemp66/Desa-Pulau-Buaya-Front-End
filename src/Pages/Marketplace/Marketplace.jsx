@@ -9,6 +9,8 @@ const marketplace = () => {
         <p className="mb-2 text-lg font-semibold text-white text-center">
           Semua Produk
         </p>
+        {/* setelah ngejalanin line dibawah, card nyo muncul lagi background imageny*/}
+        {/* <div className={`w-44 h-44 bg-red bg-cover bg-no-repeat bg-center bg-[image:url('./src/Assets/jerukBusuk.jpg')]`}></div> */}
         <div className="grid grid-cols-2 grid-rows-3 gap-4">
           <Card />
           <Card />
