@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import mascotBoth from "../../Assets/Icons/mascot-both.svg";
 
+import GoogleMapReact from "google-map-react";
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
 import photo1 from "../../Assets/car-1.jpg";
 import photo2 from "../../Assets/car-2.jpg";
 import photo3 from "../../Assets/car-3.jpg";
@@ -15,6 +19,7 @@ import {
   MdStar as StarIcon,
   MdTravelExplore,
 } from "react-icons/md";
+import { TbMapSearch } from "react-icons/tb";
 
 import { GiCrafting } from "react-icons/gi";
 
@@ -28,6 +33,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 
 const Home = () => {
+  const defaultProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627,
+    },
+    zoom: 11,
+  };
   return (
     <div className="bg-cream-light flex flex-col">
       <div className="bg-[url('./src/Assets/bg-home.jpg')] bg-no-repeat bg-center bg-cover relative w-screen h-[35rem]">
@@ -66,7 +78,6 @@ const Home = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="2010 - 2011"
           iconStyle={{ background: "#2b6474", color: "#fff" }}
           icon={<GiCrafting />}
         >
@@ -82,70 +93,22 @@ const Home = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="2008 - 2010"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={<WorkIcon />}
+          iconStyle={{ background: "#2b6474", color: "#fff" }}
+          icon={<TbMapSearch />}
         >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            Los Angeles, CA
-          </h4>
-          <p>User Experience, Visual Design</p>
+          <div className="mapouter">
+            <div className="gmap_canvas">
+              <iframe
+                className="w-full h-80"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=desa%20pulau%20buaya&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameBorder="0"
+                scrolling="no"
+              ></iframe>
+            </div>
+          </div>
+          <p className="text-center">Letak Wilayah Desa Pulau Buaya</p>
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2006 - 2008"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            San Francisco, CA
-          </h4>
-          <p>User Experience, Visual Design</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="April 2013"
-          iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Content Marketing for Web, Mobile and Social Media
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-          <p>Strategy, Social Media</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="November 2012"
-          iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Agile Development Scrum Master
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-          <p>Creative Direction, User Experience, Visual Design</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2002 - 2006"
-          iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Bachelor of Science in Interactive Digital Media Visual Imaging
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            Bachelor Degree
-          </h4>
-          <p>Creative Direction, Visual Design</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-          icon={<StarIcon />}
-        />
       </VerticalTimeline>
     </div>
   );

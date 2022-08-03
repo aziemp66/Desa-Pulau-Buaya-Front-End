@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Fade } from "react-reveal";
 
 import { AiFillHome, AiFillInfoCircle, AiOutlineHistory } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
@@ -24,14 +23,12 @@ const Navbar = ({ toggleShow, show }) => {
               : "bg-blue-dark text-white border-b-2"
           }`}
         >
-          <div
-            className={`flex justify-center items-center`}
-            onClick={() => toggleShow((prev) => !prev)}
-          >
+          <div className={`flex justify-center items-center`}>
             <BsThreeDots
               className={`w-10 h-10 cursor-pointer lg:text-white absolute top-5 left-10 transition-all duration-300 ease-in-out ${
                 show && "lg:hidden"
               }`}
+              onClick={() => toggleShow((prev) => !prev)}
             />
           </div>
           <div className="flex justify-center items-center w-full">
@@ -40,8 +37,8 @@ const Navbar = ({ toggleShow, show }) => {
             </h1>
           </div>
         </div>
-        <div className="lg:hidden bg-cream-light">
-          <Fade big when={show}>
+        {show && (
+          <div className="lg:hidden bg-cream-light">
             <div
               onClick={() => toggleShow((prev) => !prev)}
               className={`w-screen bg-cream-light absolute`}
@@ -73,8 +70,8 @@ const Navbar = ({ toggleShow, show }) => {
                 </Link>
               </ul>
             </div>
-          </Fade>
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );
