@@ -7,6 +7,8 @@ import { GiVillage, GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = ({ toggleShow, show }) => {
   const location = useLocation();
+  const insideMarketPlace = location.pathname.includes("/marketplace");
+
   return (
     <div
       className={`flex sticky top-0 flex-row ${
@@ -15,10 +17,10 @@ const Navbar = ({ toggleShow, show }) => {
     >
       <div className="flex flex-col">
         <div
-          className={`flex flex-row w-screen h-20 py-5 px-8 ${
-            location.pathname === "/"
-              ? "bg-transparent"
-              : "bg-slate-100 border-b-2"
+          className={`flex flex-row w-screen h-[4.5rem] py-5 px-8 ${
+            !insideMarketPlace
+              ? "bg-cream-light lg:bg-transparent lg:absolute "
+              : "bg-blue-dark text-white border-b-2"
           }`}
         >
           <div
@@ -26,44 +28,44 @@ const Navbar = ({ toggleShow, show }) => {
             onClick={() => toggleShow((prev) => !prev)}
           >
             <GiHamburgerMenu
-              className={`w-10 h-10 text-blue-500 hover:text-blue-600 active:text-blue-700 cursor-pointer  transition-all duration-300 ease-in-out ${
-                show && "lg:text-transparent"
+              className={`w-10 h-10 cursor-pointer  transition-all duration-300 ease-in-out ${
+                show && "lg:hidden"
               }`}
             />
           </div>
           <div className="flex justify-center items-center w-full">
-            <h1 className="text-blue-500 text-xl font-noto-sans font-bold">
+            <h1 className="text-xl font-noto-sans font-bold">
               Desa Pulau Buaya
             </h1>
           </div>
         </div>
-        <div className="lg:hidden">
+        <div className="lg:hidden bg-cream-light">
           <Fade big when={show}>
             <div
               onClick={() => toggleShow((prev) => !prev)}
-              className={`w-screen bg-slate-100 absolute`}
+              className={`w-screen bg-cream-light absolute`}
             >
               <ul className="flex flex-col cursor-pointer ">
                 <Link to={"/"}>
-                  <li className="text-blue-500 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+                  <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 ">
                     <AiFillHome />
                     <span>Home</span>
                   </li>
                 </Link>
                 <Link to={"/about"}>
-                  <li className="text-blue-500 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+                  <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 ">
                     <AiFillInfoCircle />
                     <span>Tentang</span>
                   </li>
                 </Link>
                 <Link to={"/history"}>
-                  <li className="text-blue-500 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+                  <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 ">
                     <AiOutlineHistory />
                     <span>Sejarah</span>
                   </li>
                 </Link>
                 <Link to={"/head-info"}>
-                  <li className="text-blue-500 font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 hover:bg-slate-200 active:bg-slate-300">
+                  <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 ">
                     <GiVillage />
                     <span>Info Kepala Desa</span>
                   </li>
