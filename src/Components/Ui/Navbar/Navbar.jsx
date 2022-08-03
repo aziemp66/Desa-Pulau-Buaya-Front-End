@@ -12,7 +12,7 @@ const Navbar = ({ toggleShow, show }) => {
 
   return (
     <div
-      className={`flex sticky z-10 top-0 flex-row ${
+      className={`flex absolute z-10 top-0 flex-row ${
         location.pathname === "/" && "lg:bg-transparent"
       }`}
     >
