@@ -8,6 +8,7 @@ import About from "./Pages/About/About";
 import History from "./Pages/History/History";
 import HeadInfo from "./Pages/HeadInfo/HeadInfo";
 import Marketplace from "./Pages/Marketplace/Marketplace";
+import ProductView from "./Pages/Marketplace/ProductView/ProductView";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -26,6 +27,7 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/head-info" element={<HeadInfo />} />
           <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/marketplace/view" element={<ProductView />} />
         </Routes>
       </div>
     </div>

@@ -5,6 +5,7 @@ module.exports = {
       fontFamily: {
         "noto-sans": ["Noto Sans"],
         inter: ["Inter"],
+        mulish: ["Mulish"],
       },
       colors: {
         "blue-dark": "#2b6474",

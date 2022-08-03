@@ -52,6 +52,11 @@
   src: url("../fonts/Inter-Bold.ttf");
   font-weight: 700;
 }
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-Regular.ttf");
+  font-weight: 400;
+}
 
 html {
   margin: 0;
