@@ -1,6 +1,10 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      "noto-sans": ["Noto Sans", "sans-serif"],
+      inter: ["Inter", "sans-serif"],
+    },
     extend: {
       fontFamily: {
         "noto-sans": ["Noto Sans"],
