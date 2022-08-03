@@ -1,5 +1,5 @@
-import SearchIcon from "../../Assets/icons/searchIcon.svg?component";
-import FilterIcon from "../../Assets/icons/filterIcon.svg?component";
+import SearchIcon from "../../Assets/Icons/searchIcon.svg?component";
+import FilterIcon from "../../Assets/Icons/filterIcon.svg?component";
 
 const searchbox = () => {
   return (
