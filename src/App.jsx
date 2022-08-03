@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Ui/Navbar/Navbar";
 import Sidebar from "./Components/Ui/Sidebar/Sidebar";
+import Footer from "./Components/Ui/Footer/Footer";
 
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/marketplace/view" element={<ProductView />} />
         </Routes>
+        <Footer />
       </div>
     </div>
   );

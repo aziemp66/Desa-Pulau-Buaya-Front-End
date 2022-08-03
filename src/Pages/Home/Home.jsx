@@ -54,9 +54,9 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <VerticalTimeline>
+      <VerticalTimeline layout={"1-column-left"}>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work w-[500px] h-[500px]"
           iconStyle={{ background: "#2b6474", color: "#fff" }}
           icon={<MdTravelExplore />}
         >
