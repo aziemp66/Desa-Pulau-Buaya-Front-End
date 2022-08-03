@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Fade } from "react-reveal";
 
 import { AiFillHome, AiFillInfoCircle, AiOutlineHistory } from "react-icons/ai";
+import { BsThreeDots } from "react-icons/bs";
 import { GiVillage, GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = ({ toggleShow, show }) => {
@@ -27,14 +28,14 @@ const Navbar = ({ toggleShow, show }) => {
             className={`flex justify-center items-center`}
             onClick={() => toggleShow((prev) => !prev)}
           >
-            <GiHamburgerMenu
-              className={`w-10 h-10 cursor-pointer  transition-all duration-300 ease-in-out ${
+            <BsThreeDots
+              className={`w-10 h-10 cursor-pointer lg:text-white absolute top-5 left-10 transition-all duration-300 ease-in-out ${
                 show && "lg:hidden"
               }`}
             />
           </div>
           <div className="flex justify-center items-center w-full">
-            <h1 className="text-xl font-noto-sans font-bold">
+            <h1 className="text-xl lg:text-white font-noto-sans font-bold">
               Desa Pulau Buaya
             </h1>
           </div>
