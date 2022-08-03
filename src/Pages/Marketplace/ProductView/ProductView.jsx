@@ -62,7 +62,7 @@ const productView = () => {
         </div>
       </div>
       <div className="py-2 pl-4 font-semibold bg-white">Produk Lainnya</div>
-      <div className="pt-4 pl-4 pb-10 [&>*]:min-w-[150px] [&>*]:mr-4 flex flex-row overflow-x-auto bg-blue-light">
+      <div className="relative w-screen pt-4 pl-4 pb-10 [&>*]:min-w-[150px] [&>*]:mr-4 flex flex-row items-center overflow-x-auto bg-blue-light">
         <Card />
         <Card />
         <Card />
