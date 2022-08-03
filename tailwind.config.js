@@ -6,6 +6,11 @@ module.exports = {
       inter: ["Inter", "sans-serif"],
     },
     extend: {
+      fontFamily: {
+        "noto-sans": ["Noto Sans"],
+        inter: ["Inter"],
+        mulish: ["Mulish"],
+      },
       colors: {
         "blue-dark": "#2b6474",
         "blue-light": "#759ba6",
