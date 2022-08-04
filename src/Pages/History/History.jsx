@@ -5,13 +5,13 @@ const History = () => {
     <div className="bg-cream-light flex flex-col">
       <div className="bg-[url('./src/Assets/bg-sejarah.jpg')] bg-no-repeat bg-center bg-cover relative w-screen h-[35rem]">
         <div className="bg-[rgba(0,0,0,0.25)] absolute w-full h-full flex justify-center gap-4 items-center flex-col ">
-          <h1 className="text-white text-center text-3xl lg:text-[60px] font-noto-sans font-bold">
+          <h1 className="text-white text-center text-3xl lg:text-6xl font-noto-sans font-bold">
             Sejarah Desa Pulau Buaya
           </h1>
         </div>
       </div>
-      <div className="w-4/5 lg:w-1/2 mx-auto py-28 ">
-        <article className="bg-cream-light flex flex-col justify-center items-center gap-8">
+      <div className="w-4/5 lg:w-1/2 mx-auto py-12 lg:py-28 ">
+        <article className="bg-cream-light flex flex-col justify-center items-center gap-4 lg:gap-8 text-sm lg:text-base">
           <p className="bg-inherit">
             Desa Pulau Buaya adalah salah Desa Kepulauan yang terdiri dari
             beberapa desa kepulauan lainnya yang berada di Kabupaten Alor

@@ -12,7 +12,7 @@ import {
   AiFillShop,
 } from "react-icons/ai";
 import { BsThreeDotsVertical, BsFillMapFill } from "react-icons/bs";
-import { GiVillage } from "react-icons/gi";
+import { GiVillage, GiSewingNeedle } from "react-icons/gi";
 import { ImStatsBars, ImOffice } from "react-icons/im";
 import { IoIosArrowUp } from "react-icons/io";
 import { SiPowerbi, SiFuturelearn } from "react-icons/si";
@@ -65,7 +65,7 @@ const Sidebar = ({ show, toggleShow }) => {
               onClick={() => setShowProfileSub((prev) => !prev)}
               className="hover:bg-blue-light w-full hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-between px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300"
             >
-              <div className="flex justify-center items-center">
+              <div className="flex gap-3 justify-center items-center">
                 <AiFillInfoCircle />
                 <span>Profil Desa</span>
               </div>
@@ -80,25 +80,25 @@ const Sidebar = ({ show, toggleShow }) => {
             {showProfileSub && (
               <div>
                 <Link to={"/potential"}>
-                  <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                  <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
                     <SiPowerbi />
-                    <span>Potensi</span>
+                    <span>Potensi Desa</span>
                   </li>
                 </Link>
                 <Link to={"/map"}>
-                  <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                  <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
                     <BsFillMapFill />
                     <span>Peta Desa</span>
                   </li>
                 </Link>
                 <Link to={"/officials"}>
-                  <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                  <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
                     <ImOffice />
                     <span>Profil Aparatur</span>
                   </li>
                 </Link>
                 <Link to={"/vision-mission"}>
-                  <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                  <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
                     <SiFuturelearn />
                     <span>Visi Dan Misi</span>
                   </li>
@@ -110,6 +110,16 @@ const Sidebar = ({ show, toggleShow }) => {
             <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
               <AiOutlineHistory />
               <span>Sejarah Desa</span>
+            </li>
+          </Link>
+          <Link to={"/textile"}>
+            <li
+              className={
+                "hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300"
+              }
+            >
+              <GiSewingNeedle />
+              <span>Potret Kain tenun</span>
             </li>
           </Link>
           <Link to={"/head-info"}>
