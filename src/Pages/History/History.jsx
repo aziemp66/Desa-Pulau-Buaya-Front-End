@@ -10,8 +10,8 @@ const History = () => {
           </h1>
         </div>
       </div>
-      <div className="w-4/5 lg:w-1/2 mx-auto py-28 ">
-        <article className="bg-cream-light flex flex-col justify-center items-center gap-8">
+      <div className="w-4/5 lg:w-1/2 mx-auto py-12 lg:py-28 ">
+        <article className="bg-cream-light flex flex-col justify-center items-center gap-4 lg:gap-8 text-sm lg:text-base">
           <p className="bg-inherit">
             Desa Pulau Buaya adalah salah Desa Kepulauan yang terdiri dari
             beberapa desa kepulauan lainnya yang berada di Kabupaten Alor

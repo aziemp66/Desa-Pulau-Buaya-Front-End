@@ -82,7 +82,7 @@ const Sidebar = ({ show, toggleShow }) => {
                 <Link to={"/potential"}>
                   <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
                     <SiPowerbi />
-                    <span>Potensi</span>
+                    <span>Potensi Desa</span>
                   </li>
                 </Link>
                 <Link to={"/map"}>
