@@ -37,7 +37,7 @@ const Home = () => {
     <div className="bg-cream-light flex flex-col">
       <div className="bg-[url('./src/Assets/bg-home.jpg')] bg-no-repeat bg-center bg-cover relative w-screen h-[35rem]">
         <div className="bg-[rgba(0,0,0,0.25)] absolute w-full h-full flex justify-center gap-4 items-center flex-col ">
-          <img className="hidden lg:block" src={mascotBoth} alt="mascot" />
+          <img className="block" src={mascotBoth} alt="mascot" />
           <h1 className="text-white text-xl lg:text-[60px] font-noto-sans font-bold">
             Desa Pulau Buaya
           </h1>
