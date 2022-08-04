@@ -9,7 +9,7 @@ import Footer from "./Components/Ui/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import History from "./Pages/History/History";
-import HeadInfo from "./Pages/HeadInfo/HeadInfo";
+import HeadInfo from "./Pages/HeadInfo/ChiefInfo";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import ProductView from "./Pages/Marketplace/ProductView/ProductView";
 import Cart from "./Pages/Marketplace/Cart/Cart";
