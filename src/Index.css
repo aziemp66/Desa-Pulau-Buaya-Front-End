@@ -60,7 +60,7 @@
 
 @layer components {
   .blue-btn {
-    @apply px-2 py-1 text-center font-inter rounded-lg bg-blue-dark;
+    @apply px-2 py-1 font-semibold text-white text-center font-inter rounded-lg bg-blue-dark;
   }
 
   .blue-btn-inverted {
@@ -68,7 +68,7 @@
   }
 
   .blue-btn-round {
-    @apply py-1 px-4 text-sm font-semibold text-center rounded-full text-white bg-blue-dark;
+    @apply px-3 text-sm font-semibold text-center rounded-full text-white bg-blue-dark;
   }
 
   .blue-btn-round-inverted {
