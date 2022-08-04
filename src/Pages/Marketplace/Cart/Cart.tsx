@@ -33,9 +33,8 @@ const cart = () => {
 
   const [cartItemState, cartItemDispatch] = useReducer(cartItemReducer, {});
 
-  //cuma utk development, utk ngasih 3 id di 3 CartItem bawah itu
+  //cuma utk development, utk ngasih 4 id di 4 CartItem bawah itu
   const data = [];
-
   const getData = () => {
     const data = [
       {
@@ -95,7 +94,7 @@ const cart = () => {
         calculatedPrice += item[1].price * item[1].amount;
     });
     setTotalPrice(calculatedPrice);
-  }, [cartItemState]);
+  }, [cartItemState, allChecked]);
 
   return (
     <div className="pb-10 font-inter bg-blue-light">
