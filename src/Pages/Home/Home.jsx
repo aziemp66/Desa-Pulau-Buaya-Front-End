@@ -33,19 +33,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 
 const Home = () => {
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627,
-    },
-    zoom: 11,
-  };
   return (
     <div className="bg-cream-light flex flex-col">
       <div className="bg-[url('./src/Assets/bg-home.jpg')] bg-no-repeat bg-center bg-cover relative w-screen h-[35rem]">
-        <div className="bg-[rgba(0,0,0,0.25)] absolute w-full h-full flex justify-center items-center flex-col ">
-          <img src={mascotBoth} alt="mascot" />
-          <h1 className="text-white text-[60px] font-noto-sans font-bold">
+        <div className="bg-[rgba(0,0,0,0.25)] absolute w-full h-full flex justify-center gap-4 items-center flex-col ">
+          <img className="hidden lg:block" src={mascotBoth} alt="mascot" />
+          <h1 className="text-white text-xl lg:text-[60px] font-noto-sans font-bold">
             Desa Pulau Buaya
           </h1>
           <p className="text-white text-center">
@@ -54,13 +47,13 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <VerticalTimeline layout={"1-column-left"}>
+      <VerticalTimeline layout="2-columns">
         <VerticalTimelineElement
-          className="vertical-timeline-element--work w-[500px] h-[500px]"
+          className="vertical-timeline-element--work"
           iconStyle={{ background: "#2b6474", color: "#fff" }}
           icon={<MdTravelExplore />}
         >
-          <Carousel infiniteLoop>
+          <Carousel showThumbs={false} infiniteLoop>
             <div>
               <img src={photo1} alt="carousel" />
             </div>
@@ -85,7 +78,7 @@ const Home = () => {
           <p className="text-center">Potret Kain Tenun Khas Pulau Buaya</p>
           <div className="flex justify-center items-center mt-2">
             <Link to="/textile">
-              <button className="text-center border-2 border-blue-dark rounded-3xl px-8 py-2">
+              <button className="text-center border-2 hover:text-white hover:bg-blue-dark transition duration-500 border-blue-dark rounded-3xl px-8 py-2">
                 Lihat Lainnya
               </button>
             </Link>
@@ -99,7 +92,7 @@ const Home = () => {
           <div className="mapouter">
             <div className="gmap_canvas">
               <iframe
-                className="w-full h-80"
+                className="w-full lg:h-80"
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=desa%20pulau%20buaya&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 frameBorder="0"
