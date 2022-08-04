@@ -22,7 +22,7 @@ const Navbar = ({ toggleShow, show }) => {
     <div className={`flex sticky z-10 top-0 flex-row bg-white`}>
       <div className="flex flex-col">
         <div
-          className={`flex flex-row w-screen justify-between items-center h-[4.5rem] py-5 px-4 ${
+          className={`flex flex-row w-screen h-[4.5rem] py-5 px-8 ${
             !insideMarketPlace
               ? `bg-cream-light ${
                   !scrollDown ? "lg:bg-transparent" : "lg:bg-grayish-blue"
@@ -30,7 +30,7 @@ const Navbar = ({ toggleShow, show }) => {
               : "bg-blue-dark border-b-2"
           }`}
         >
-          <div className={`flex text-center justify-start items-center w-full`}>
+          <div className={`flex justify-center items-center`}>
             <BsThreeDots
               className={`w-10 h-10 cursor-pointer ${
                 !scrollDown ? "text-blue-dark lg:text-white" : "text-blue-dark"
@@ -42,7 +42,7 @@ const Navbar = ({ toggleShow, show }) => {
           </div>
           <div className="flex justify-center items-center w-full">
             <h1
-              className={`text-base lg:text-xl w-full text-center ${
+              className={`text-xl ${
                 !scrollDown ? "text-blue-dark lg:text-white" : "text-blue-dark"
               } font-noto-sans font-bold`}
             >
@@ -67,12 +67,6 @@ const Navbar = ({ toggleShow, show }) => {
                   <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 ">
                     <SiPowerbi />
                     <span>Potensi Desa</span>
-                  </li>
-                </Link>
-                <Link to={"/maps"}>
-                  <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 ">
-                    <SiPowerbi />
-                    <span>Peta Desa</span>
                   </li>
                 </Link>
                 <Link to={"/maps"}>
