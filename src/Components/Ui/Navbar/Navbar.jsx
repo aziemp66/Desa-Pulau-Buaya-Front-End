@@ -30,20 +30,14 @@ const Navbar = ({ toggleShow, show }) => {
         >
           <div className={`flex justify-center items-center`}>
             <BsThreeDots
-              className={`w-10 h-10 cursor-pointer ${
-                !scrollDown ? "lg:text-white" : "text-blue-dark"
-              } absolute top-5 left-10 transition-all duration-300 ease-in-out ${
+              className={`w-10 h-10 cursor-pointer text-blue-dark absolute top-5 left-10 transition-all duration-300 ease-in-out ${
                 show && "lg:hidden"
               }`}
               onClick={() => toggleShow((prev) => !prev)}
             />
           </div>
           <div className="flex justify-center items-center w-full">
-            <h1
-              className={`text-xl ${
-                !scrollDown ? "text-white" : "text-blue-dark"
-              } font-noto-sans font-bold`}
-            >
+            <h1 className={`text-xl text-blue-dark font-noto-sans font-bold`}>
               Desa Pulau Buaya
             </h1>
           </div>
@@ -54,7 +48,7 @@ const Navbar = ({ toggleShow, show }) => {
               onClick={() => toggleShow((prev) => !prev)}
               className={`w-screen bg-cream-light absolute`}
             >
-              <ul className="flex flex-col cursor-pointer ">
+              <ul className="flex flex-col cursor-pointer text-blue-dark ">
                 <Link to={"/"}>
                   <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 ">
                     <AiFillHome />
