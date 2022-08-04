@@ -30,14 +30,16 @@ const Navbar = ({ toggleShow, show }) => {
         >
           <div className={`flex justify-center items-center`}>
             <BsThreeDots
-              className={`w-10 h-10 cursor-pointer text-blue-dark absolute top-5 left-10 transition-all duration-300 ease-in-out ${
+              className={`w-10 h-10 cursor-pointer text-blue-dark lg:text-white absolute top-5 left-10 transition-all duration-300 ease-in-out ${
                 show && "lg:hidden"
               }`}
               onClick={() => toggleShow((prev) => !prev)}
             />
           </div>
           <div className="flex justify-center items-center w-full">
-            <h1 className={`text-xl text-blue-dark font-noto-sans font-bold`}>
+            <h1
+              className={`text-xl text-blue-dark lg:text-white font-noto-sans font-bold`}
+            >
               Desa Pulau Buaya
             </h1>
           </div>
