@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import pointsBlackVertical from "../../../Assets/Icons/points-black-vertical.svg";
@@ -11,11 +11,14 @@ import {
   AiOutlineClose,
   AiFillShop,
 } from "react-icons/ai";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsThreeDotsVertical, BsFillMapFill } from "react-icons/bs";
 import { GiVillage } from "react-icons/gi";
-import { ImStatsBars } from "react-icons/im";
+import { ImStatsBars, ImOffice } from "react-icons/im";
+import { IoIosArrowUp } from "react-icons/io";
+import { SiPowerbi, SiFuturelearn } from "react-icons/si";
 
 const Sidebar = ({ show, toggleShow }) => {
+  const [showProfileSub, setShowProfileSub] = useState(false);
   const location = useLocation();
   const insideMarketPlace = location.pathname.includes("/marketplace");
 
@@ -57,12 +60,52 @@ const Sidebar = ({ show, toggleShow }) => {
               <span>Home</span>
             </li>
           </Link>
-          <Link to={"/about"}>
-            <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
-              <AiFillInfoCircle />
-              <span>Profil Desa</span>
+          <div className="group flex flex-col relative">
+            <li
+              onClick={() => setShowProfileSub((prev) => !prev)}
+              className="hover:bg-blue-light w-full hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-between px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300"
+            >
+              <div className="flex justify-center items-center">
+                <AiFillInfoCircle />
+                <span>Profil Desa</span>
+              </div>
+              <div>
+                <IoIosArrowUp
+                  className={`${
+                    !showProfileSub && "rotate-180"
+                  } transition duration-300 ease-in-out`}
+                />
+              </div>
             </li>
-          </Link>
+            {showProfileSub && (
+              <div>
+                <Link to={"/potential"}>
+                  <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                    <SiPowerbi />
+                    <span>Potensi</span>
+                  </li>
+                </Link>
+                <Link to={"/map"}>
+                  <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                    <BsFillMapFill />
+                    <span>Peta Desa</span>
+                  </li>
+                </Link>
+                <Link to={"/officials"}>
+                  <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                    <ImOffice />
+                    <span>Profil Aparatur</span>
+                  </li>
+                </Link>
+                <Link to={"/vision-mission"}>
+                  <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                    <SiFuturelearn />
+                    <span>Visi Dan Misi</span>
+                  </li>
+                </Link>
+              </div>
+            )}
+          </div>
           <Link to={"/history"}>
             <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
               <AiOutlineHistory />
