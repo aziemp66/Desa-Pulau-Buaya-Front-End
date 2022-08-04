@@ -3,7 +3,7 @@ import FilterIcon from "../../Assets/Icons/filterIcon.svg?component";
 
 const searchbox = () => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center justify-between">
       <label className="flex-1 relative block">
         <span className="absolute inset-y-0 left-0 pl-2 flex items-center">
           <SearchIcon className="fill-blue-dark h-4" />
@@ -16,7 +16,7 @@ const searchbox = () => {
         />
       </label>
       <button>
-        <FilterIcon className="ml-2 h-8 fill-blue-dark" />
+        <FilterIcon className="h-8 fill-blue-dark" />
       </button>
     </div>
   );
