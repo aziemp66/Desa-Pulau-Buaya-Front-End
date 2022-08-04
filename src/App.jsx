@@ -9,6 +9,7 @@ import History from "./Pages/History/History";
 import HeadInfo from "./Pages/HeadInfo/HeadInfo";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import ProductView from "./Pages/Marketplace/ProductView/ProductView";
+import Cart from "./Pages/Marketplace/Cart/Cart";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -20,7 +21,7 @@ function App() {
           !show && "lg:-translate-x-80"
         }`}
       >
-        <Navbar toggleShow={setShow} show={show} />
+        {/* <Navbar toggleShow={setShow} show={show} /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -28,6 +29,7 @@ function App() {
           <Route path="/head-info" element={<HeadInfo />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/marketplace/view" element={<ProductView />} />
+          <Route path="/marketplace/cart" element={<Cart />} />
         </Routes>
       </div>
     </div>

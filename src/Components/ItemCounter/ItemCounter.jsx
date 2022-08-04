@@ -17,7 +17,7 @@ const itemCounter = (props) => {
         type="number"
         value={props.state}
         onChange={(e) => {
-          props.setState(parseInt(e.target.value, 10));
+          props.setState(+e.target.value || 0);
         }}
       />
       <button
