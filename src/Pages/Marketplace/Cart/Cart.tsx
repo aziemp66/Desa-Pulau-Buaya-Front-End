@@ -91,7 +91,8 @@ const cart = () => {
     let calculatedPrice = 0;
 
     Object.entries(cartItemState).map((item) => {
-      if (item[1].checked) calculatedPrice += item[1].price * item[1].amount;
+      if (item[1].checked || allChecked)
+        calculatedPrice += item[1].price * item[1].amount;
     });
     setTotalPrice(calculatedPrice);
   }, [cartItemState]);
