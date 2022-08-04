@@ -79,9 +79,9 @@ const Footer = () => {
           <p className="text-center lg:text-start ">
             Copyright © Desa Pulau Buaya 2022
           </p>
-          <address className="text-center lg:text-start flex flex-col lg:flex-row">
-            <p>Kecamatan Alor Barat Laut,&nbsp;</p>
-            <p>Kabupaten Alor,&nbsp;</p>
+          <address className="text-center lg:text-start flex flex-col lg:flex-row lg:gap-1">
+            <p className="lg:after:content-[',']">Kecamatan Alor Barat Laut</p>
+            <p className="lg:after:content-[',']">Kabupaten Alor</p>
             <p>Nusa Tenggara Timur</p>
           </address>
         </div>
