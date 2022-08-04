@@ -34,7 +34,6 @@ const cart = () => {
   const [cartItemState, cartItemDispatch] = useReducer(cartItemReducer, {});
 
   //cuma utk development, utk ngasih 4 id di 4 CartItem bawah itu
-  const data = [];
   const getData = () => {
     const data = [
       {
@@ -106,7 +105,7 @@ const cart = () => {
             id={allCheckedId}
           />
           <label
-            className="text-sm font-medium text-white"
+            className="ml-2 text-sm font-medium text-white"
             htmlFor={allCheckedId}
           >
             Pilih Semua
@@ -147,9 +146,7 @@ const cart = () => {
           <span className="mr-2 text-blue-light font-semibold">Rp</span>
           {totalPrice.toLocaleString("id-ID")}
         </div>
-        <button className="py-1 px-4 text-sm font-semibold rounded-full text-white bg-blue-dark">
-          Check Out
-        </button>
+        <button className="blue-btn-round">Check Out</button>
       </div>
     </div>
   );

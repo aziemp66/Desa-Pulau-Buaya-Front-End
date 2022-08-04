@@ -2,13 +2,15 @@ import CheckIcon from "../../Assets/Icons/check-icon.svg?component";
 
 const customCheckbox = (props) => {
   return (
-    <label
+    <button
       className="relative flex items-center justify-center"
-      htmlFor={props.id}
+      onClick={() => {
+        props.setState(!props.state);
+      }}
     >
       <input
         id={props.id}
-        className="peer mr-2 w-6 h-6 appearance-none checked:bg-blue-dark bg-white border-2 border-blue-dark rounded-md"
+        className="peer w-6 h-6 appearance-none checked:bg-blue-dark bg-white border-2 border-blue-dark rounded-md"
         type="checkbox"
         name="select-all"
         checked={props.state}
@@ -17,7 +19,7 @@ const customCheckbox = (props) => {
         }}
       />
       <CheckIcon className="absolute peer-checked:visible invisible w-6 h-6 left-0 fill-blue-dark" />
-    </label>
+    </button>
   );
 };
 
