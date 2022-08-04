@@ -12,7 +12,7 @@ import {
   AiFillShop,
 } from "react-icons/ai";
 import { BsThreeDotsVertical, BsFillMapFill } from "react-icons/bs";
-import { GiVillage } from "react-icons/gi";
+import { GiVillage, GiSewingNeedle } from "react-icons/gi";
 import { ImStatsBars, ImOffice } from "react-icons/im";
 import { IoIosArrowUp } from "react-icons/io";
 import { SiPowerbi, SiFuturelearn } from "react-icons/si";
@@ -110,6 +110,16 @@ const Sidebar = ({ show, toggleShow }) => {
             <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
               <AiOutlineHistory />
               <span>Sejarah Desa</span>
+            </li>
+          </Link>
+          <Link to={"/textile"}>
+            <li
+              className={
+                "hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300"
+              }
+            >
+              <GiSewingNeedle />
+              <span>Potret Kain tenun</span>
             </li>
           </Link>
           <Link to={"/head-info"}>
