@@ -15,7 +15,7 @@ import mailBlack from "../../../Assets/Icons/mail-black.svg";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center bg-cream-dark py-8 gap-8">
+    <div className="flex flex-col items-center bg-cream-dark py-8 gap-8 text-sm">
       <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start w-4/5">
         <div className="flex flex-col font-bold justify-center text-center lg:text-start">
           <h1 className="text-center lg:text-start text-white py-2 ">
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex w-[80%] lg:w-4/5 justify-center lg:justify-start">
-        <div className="flex flex-col justify-start  text-white">
+        <div className="flex flex-col justify-start text-white">
           <p className="text-center lg:text-start ">
             Copyright © Desa Pulau Buaya 2022
           </p>
