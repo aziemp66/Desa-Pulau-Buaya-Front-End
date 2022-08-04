@@ -16,7 +16,7 @@ const card = () => {
 
   return (
     <Link
-      className="flex flex-col overflow-hidden h-44 rounded-xl shadow-md"
+      className="flex flex-col overflow-hidden h-48 rounded-xl shadow-md"
       to={link}
     >
       <div

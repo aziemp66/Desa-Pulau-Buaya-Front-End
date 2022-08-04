@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import RectangleImageContainer from "../../../Components/RectangleImageContainer/RectangleImageContainer";
 import ItemCounter from "../../../Components/ItemCounter/ItemCounter";
 import Card from "../Card/Card";
@@ -28,39 +28,52 @@ const productView = () => {
   } else {
     data = {
       id: "",
-      title: "Produk tydack ditemukan",
-      image: imageNotAvailable,
-      description: "Tidak ada",
-      price: 0,
     };
   }
 
   return (
     <div className="font-inter">
       <div className="py-4 px-6 bg-blue-light">
-        <RectangleImageContainer size="300px" image={data.image} />
+        <RectangleImageContainer
+          size="300px"
+          image={data.id ? data.image : imageNotAvailable}
+        />
       </div>
       <div className="px-4 py-2 bg-white drop-shadow-xl">
-        <p className="text-md font-medium">{data.title}</p>
-        <p className="pt-1">Rp. {data.price.toLocaleString("in-ID")}</p>
+        <p className="text-md font-medium">
+          {data.id ? data.title : "Produk Tidak Ditemukan"}
+        </p>
+        <p className="pt-1">
+          {data.id ? `Rp. ${data.price.toLocaleString("in-ID")}` : ""}
+        </p>
       </div>
-      <div className="p-4 min-h-[220px]">
-        <p className="text-blue-light font-medium">Deskripsi Produk:</p>
-        <p className="pt-2 text-sm">{data.description}</p>
-      </div>
-      <div className="pt-4 pb-8 px-6 bg-blue-light">
-        <div className="p-4 bg-white rounded-xl">
-          <ItemCounter state={buyAmount} setState={setBuyAmount} />
-          <div className="pt-4 font-medium text-sm text-white flex items-center justify-center">
-            <button className="flex-1 px-2 py-1 mr-2 text-center rounded-xl bg-blue-dark">
-              + Keranjang
-            </button>
-            <button className="flex-1 px-2 py-1 text-center rounded-xl bg-blue-dark">
-              Beli Sekarang
-            </button>
+      {data.id ? (
+        <>
+          <div className="p-4 min-h-[220px]">
+            <p className="text-blue-light font-medium">Deskripsi Produk:</p>
+            <p className="pt-2 text-sm">{data.description}</p>
           </div>
-        </div>
-      </div>
+          <div className="pt-4 pb-8 px-6 bg-blue-light">
+            <div className="p-4 bg-white rounded-xl">
+              <ItemCounter state={buyAmount} setState={setBuyAmount} />
+              <div className="pt-4 font-medium text-sm text-white flex items-center justify-center">
+                <button className="flex-1 px-2 py-1 mr-2 text-center rounded-xl bg-blue-dark">
+                  + Keranjang
+                </button>
+                <Link
+                  className="flex-1 px-2 py-1 text-center rounded-xl bg-blue-dark"
+                  to="/marketplace/cart"
+                >
+                  Beli Sekarang
+                </Link>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
+
       <div className="py-2 pl-4 font-semibold bg-white">Produk Lainnya</div>
       <div className="relative w-screen pt-4 pl-4 pb-10 [&>*]:min-w-[150px] [&>*]:mr-4 flex flex-row items-center overflow-x-auto bg-blue-light">
         <Card />
