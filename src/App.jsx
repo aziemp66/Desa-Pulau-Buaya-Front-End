@@ -11,6 +11,7 @@ import HeadInfo from "./Pages/HeadInfo/HeadInfo";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import ProductView from "./Pages/Marketplace/ProductView/ProductView";
 import Cart from "./Pages/Marketplace/Cart/Cart";
+import Order from "./Pages/Marketplace/Order/Order";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -31,6 +32,7 @@ function App() {
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/marketplace/view" element={<ProductView />} />
           <Route path="/marketplace/cart" element={<Cart />} />
+          <Route path="/marketplace/order" element={<Order />} />
         </Routes>
         <Footer />
       </div>

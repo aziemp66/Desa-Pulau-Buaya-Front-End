@@ -20,7 +20,7 @@ const marketplace = () => {
             <Card />
             <Card />
           </div>
-          <button className="table px-3 mt-6 mx-auto text-blue-dark font-inter font-medium bg-white border border-blue-dark rounded-full">
+          <button className="table mx-auto mt-6 blue-btn-round-inverted">
             Tampilkan Lebih Banyak
           </button>
         </div>

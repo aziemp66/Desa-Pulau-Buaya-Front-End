@@ -57,13 +57,8 @@ const productView = () => {
             <div className="p-4 bg-white rounded-xl">
               <ItemCounter state={buyAmount} setState={setBuyAmount} />
               <div className="pt-4 font-medium text-sm text-white flex items-center justify-center">
-                <button className="flex-1 px-2 py-1 mr-2 text-center rounded-xl bg-blue-dark">
-                  + Keranjang
-                </button>
-                <Link
-                  className="flex-1 px-2 py-1 text-center rounded-xl bg-blue-dark"
-                  to="/marketplace/cart"
-                >
+                <button className="flex-1 mr-2 blue-btn">+ Keranjang</button>
+                <Link className="flex-1 blue-btn" to="/marketplace/cart">
                   Beli Sekarang
                 </Link>
               </div>
