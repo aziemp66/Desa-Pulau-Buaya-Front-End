@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Ui/Navbar/Navbar";
 import Sidebar from "./Components/Ui/Sidebar/Sidebar";
+import Footer from "./Components/Ui/Footer/Footer";
 
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
@@ -21,7 +22,7 @@ function App() {
           !show && "lg:-translate-x-80"
         }`}
       >
-        {/* <Navbar toggleShow={setShow} show={show} /> */}
+        <Navbar toggleShow={setShow} show={show} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -31,9 +32,11 @@ function App() {
           <Route path="/marketplace/view" element={<ProductView />} />
           <Route path="/marketplace/cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </div>
     </div>
   );
 }
 
 export default App;
+1;
