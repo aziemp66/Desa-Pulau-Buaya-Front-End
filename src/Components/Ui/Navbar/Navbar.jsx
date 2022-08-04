@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { AiFillHome, AiFillInfoCircle, AiOutlineHistory } from "react-icons/ai";
@@ -7,32 +7,43 @@ import { GiVillage, GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = ({ toggleShow, show }) => {
   const location = useLocation();
+  const [scrollDown, setScrollDown] = useState(false);
+
   const insideMarketPlace = location.pathname.includes("/marketplace");
 
+  const changeColor = () =>
+    window.scrollY > 100 ? setScrollDown(true) : setScrollDown(false);
+
+  window.addEventListener("scroll", changeColor);
+
   return (
-    <div
-      className={`flex sticky z-10 top-0 flex-row ${
-        location.pathname === "/" && "lg:bg-transparent"
-      }`}
-    >
+    <div className={`flex sticky z-10 top-0 flex-row bg-white`}>
       <div className="flex flex-col">
         <div
           className={`flex flex-row w-screen h-[4.5rem] py-5 px-8 ${
             !insideMarketPlace
-              ? "bg-cream-light lg:bg-transparent lg:absolute "
-              : "bg-blue-dark text-white border-b-2"
+              ? `bg-cream-light ${
+                  !scrollDown ? "lg:bg-transparent" : "lg:bg-grayish-blue"
+                } lg:absolute `
+              : "bg-blue-dark border-b-2"
           }`}
         >
           <div className={`flex justify-center items-center`}>
             <BsThreeDots
-              className={`w-10 h-10 cursor-pointer lg:text-white absolute top-5 left-10 transition-all duration-300 ease-in-out ${
+              className={`w-10 h-10 cursor-pointer ${
+                !scrollDown ? "lg:text-white" : "text-blue-dark"
+              } absolute top-5 left-10 transition-all duration-300 ease-in-out ${
                 show && "lg:hidden"
               }`}
               onClick={() => toggleShow((prev) => !prev)}
             />
           </div>
           <div className="flex justify-center items-center w-full">
-            <h1 className="text-xl lg:text-white font-noto-sans font-bold">
+            <h1
+              className={`text-xl ${
+                !scrollDown ? "text-white" : "text-blue-dark"
+              } font-noto-sans font-bold`}
+            >
               Desa Pulau Buaya
             </h1>
           </div>

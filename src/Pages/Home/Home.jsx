@@ -10,7 +10,7 @@ import photo1 from "../../Assets/car-1.jpg";
 import photo2 from "../../Assets/car-2.jpg";
 import photo3 from "../../Assets/car-3.jpg";
 import photo4 from "../../Assets/car-4.jpg";
-import kainTenun from "../../Assets/KainTenun/DSC_0645.jpg";
+import kainTenun from "../../Assets/KainTenun/car1_1.jpg";
 
 import { BsCircleFill } from "react-icons/bs";
 import {
