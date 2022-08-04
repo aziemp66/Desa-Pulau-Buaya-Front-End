@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { AiFillHome, AiFillShop, AiOutlineHistory } from "react-icons/ai";
+import {
+  AiFillHome,
+  AiFillShop,
+  AiOutlineHistory,
+  AiFillInfoCircle,
+} from "react-icons/ai";
 import { BsThreeDots, BsFillMapFill } from "react-icons/bs";
 import { GiSewingNeedle, GiVillage } from "react-icons/gi";
 import { SiPowerbi } from "react-icons/si";
@@ -63,28 +68,10 @@ const Navbar = ({ toggleShow, show }) => {
                     <span>Home</span>
                   </li>
                 </Link>
-                <Link to={"/potential"}>
+                <Link to={"/about"}>
                   <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 ">
-                    <SiPowerbi />
-                    <span>Potensi Desa</span>
-                  </li>
-                </Link>
-                <Link to={"/maps"}>
-                  <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 ">
-                    <BsFillMapFill />
-                    <span>Peta Desa</span>
-                  </li>
-                </Link>
-                <Link to={"/officials"}>
-                  <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 ">
-                    <ImOffice />
-                    <span>Profil Aparatur</span>
-                  </li>
-                </Link>
-                <Link to={"/vision-mission"}>
-                  <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 ">
-                    <BsFillMapFill />
-                    <span>Visi Dan Misi</span>
+                    <AiFillInfoCircle />
+                    <span>Profil Desa</span>
                   </li>
                 </Link>
                 <Link to={"/history"}>
