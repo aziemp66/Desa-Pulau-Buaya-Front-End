@@ -30,12 +30,6 @@ const About = () => {
         <ul className="my-8 font-bold flex flex-col justify-center items-center gap-4 w-full lg:w-1/3 mx-auto">
           <Link
             className="py-4 w-full rounded-full text-center bg-blue-dark hover:bg-blue-dark-bold text-white transition duration-300"
-            to="/vision-mission"
-          >
-            Visi Dan Misi
-          </Link>
-          <Link
-            className="py-4 w-full rounded-full text-center bg-blue-dark hover:bg-blue-dark-bold text-white transition duration-300"
             to="/potential"
           >
             Potensi Desa

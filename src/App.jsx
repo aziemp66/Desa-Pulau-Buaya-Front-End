@@ -26,6 +26,8 @@ import Order from "./Pages/Marketplace/Order/Order";
 import OrderHistory from "./Pages/Marketplace/OrderHistory/OrderHistory";
 import Statistics from "./Pages/Marketplace/Statistics/Statistics";
 import Textile from "./Pages/Textile/Textile";
+import Map from "./Pages/About/Map/Map";
+import Potential from "./Pages/About/Potential/Potential";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -43,6 +45,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/officials" element={<Officials />} />
+          <Route path="/map" element={<Map />} />
+          <Route path="/potential" element={<Potential />} />
           <Route path="/history" element={<History />} />
           <Route path="/head-info" element={<ChiefInfo />} />
           <Route path="/textile" element={<Textile />} />
