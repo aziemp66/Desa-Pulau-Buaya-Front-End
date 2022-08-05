@@ -44,7 +44,7 @@ const orderDataBuyer = (props) => (
                   <img src={item.image} alt="Gambar Produk" />
                 </div>
                 <div className="flex-1 p-2 text-sm flex flex-row align-start justify-between">
-                  <p className="flex-none w-[100px] mr-4 font-inter">
+                  <p className="flex-1 w-[100px] mr-4 font-inter">
                     {item?.name ? item.name : "Produk Tidak Ditemukan"}
                   </p>
                   <div className="flex-1 flex flex-row align-start justify-between">

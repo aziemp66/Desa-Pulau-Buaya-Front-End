@@ -126,32 +126,34 @@ const orderHistory = () => {
   };
 
   return (
-    <div className="font-inter pb-4 bg-blue-light">
-      <div className="pt-8 pb-4 px-4 flex flex-row">
-        <span className="mr-2 font-medium text-white">Tampilkan</span>
-        <CustomDropdown state={show} setState={setShow} values={showValues} />
-      </div>
-      {selectedOrderItems.map((item, index) => {
-        return (
-          <OrderDataBuyer
-            key={index}
-            data={orderItems[item]}
-            dataId={item}
-            showValues={orderItemStatusValues}
-            translateStatusToIn={translateStatusToIn}
-            translateStatusToEng={translateStatusToEng}
-          >
-            <div
-              className={
-                (orderItems[item].status === "done" ? "" : "bg-blue-light ") +
-                "flex-none py-0 px-2 text-sm font-normal blue-btn"
-              }
+    <div className="bg-blue-light">
+      <div className="max-w-[700px] mx-auto font-inter pb-4">
+        <div className="pt-8 pb-4 px-4 flex flex-row">
+          <span className="mr-2 font-medium text-white">Tampilkan</span>
+          <CustomDropdown state={show} setState={setShow} values={showValues} />
+        </div>
+        {selectedOrderItems.map((item, index) => {
+          return (
+            <OrderDataBuyer
+              key={index}
+              data={orderItems[item]}
+              dataId={item}
+              showValues={orderItemStatusValues}
+              translateStatusToIn={translateStatusToIn}
+              translateStatusToEng={translateStatusToEng}
             >
-              {translateStatusToIn(orderItems[item].status)}
-            </div>
-          </OrderDataBuyer>
-        );
-      })}
+              <div
+                className={
+                  (orderItems[item].status === "done" ? "" : "bg-blue-light ") +
+                  "flex-none py-0 px-2 text-sm font-normal blue-btn"
+                }
+              >
+                {translateStatusToIn(orderItems[item].status)}
+              </div>
+            </OrderDataBuyer>
+          );
+        })}
+      </div>
     </div>
   );
 };

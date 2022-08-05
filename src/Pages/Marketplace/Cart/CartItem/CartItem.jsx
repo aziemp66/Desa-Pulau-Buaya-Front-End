@@ -16,7 +16,7 @@ const cartItem = (props) => {
   });
 
   return (
-    <div className="p-2 font-inter flex w-screen h-28 bg-white">
+    <div className="p-2 font-inter flex w-full h-28 bg-white">
       <CustomCheckbox
         className="flex-none"
         id={checkId}

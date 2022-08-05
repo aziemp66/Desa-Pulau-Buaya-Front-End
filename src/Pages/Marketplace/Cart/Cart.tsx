@@ -97,62 +97,67 @@ const cart = () => {
   }, [cartItemState, allChecked]);
 
   return (
-    <div className="pb-10 font-inter bg-blue-light">
-      <div className="p-4 w-screen">
-        <div className="flex flex-row items-center justify-left border-red-500">
-          <CustomCheckbox
-            state={allChecked}
-            setState={setAllChecked}
-            id={allCheckedId}
-          />
-          <label
-            className="ml-2 text-sm font-medium text-white"
-            htmlFor={allCheckedId}
-          >
-            Pilih Semua
-          </label>
-        </div>
-      </div>
-      <div className="[&>*]:mb-4">
-        {Object.entries(cartItemState).map((item, index) => {
-          return (
-            <CartItem
-              key={index}
-              itemId={item[0]}
-              name={item[1].name}
-              price={item[1].price}
-              amount={item[1].amount}
-              checked={item[1].checked || allChecked}
-              setChecked={(checked) => {
-                cartItemDispatch({
-                  type: "changeChecked",
-                  payload: { id: item[0], checked },
-                });
-              }}
-              setAmount={(amount) => {
-                cartItemDispatch({
-                  type: "changeAmount",
-                  payload: { id: item[0], amount },
-                });
-              }}
-            />
-          );
-        })}
-      </div>
-      <div className="mx-6 mt-6 p-4 rounded-lg bg-white flex items-center justify-between">
-        <div>
-          <p className="text-sm font-inter font-semibold text-blue-dark">
-            Harga Total:
+    <div className="bg-blue-light">
+      <div className="max-w-[700px] mx-auto pb-10 font-inter">
+        <div className="p-4 w-full">
+          <p className="pl-2 md:pl-0 pb-4 text-lg font-semibold text-white">
+            Keranjang Saya
           </p>
-          <span className="mr-2 text-blue-light font-semibold">Rp</span>
-          {totalPrice.toLocaleString("id-ID")}
+          <div className="flex flex-row items-center justify-left border-red-500">
+            <CustomCheckbox
+              state={allChecked}
+              setState={setAllChecked}
+              id={allCheckedId}
+            />
+            <label
+              className="ml-2 text-sm font-medium text-white"
+              htmlFor={allCheckedId}
+            >
+              Pilih Semua
+            </label>
+          </div>
         </div>
-        <Link
-          className="py-1 px-4 blue-btn-round"
-          to="/marketplace/cart/checkout"
-        >
-          Check Out
-        </Link>
+        <div className="[&>*]:mb-4">
+          {Object.entries(cartItemState).map((item, index) => {
+            return (
+              <CartItem
+                key={index}
+                itemId={item[0]}
+                name={item[1].name}
+                price={item[1].price}
+                amount={item[1].amount}
+                checked={item[1].checked || allChecked}
+                setChecked={(checked) => {
+                  cartItemDispatch({
+                    type: "changeChecked",
+                    payload: { id: item[0], checked },
+                  });
+                }}
+                setAmount={(amount) => {
+                  cartItemDispatch({
+                    type: "changeAmount",
+                    payload: { id: item[0], amount },
+                  });
+                }}
+              />
+            );
+          })}
+        </div>
+        <div className="mx-6 mt-6 p-4 rounded-lg bg-white flex items-center justify-between">
+          <div>
+            <p className="text-sm font-inter font-semibold text-blue-dark">
+              Harga Total:
+            </p>
+            <span className="mr-2 text-blue-light font-semibold">Rp</span>
+            {totalPrice.toLocaleString("id-ID")}
+          </div>
+          <Link
+            className="py-1 px-4 blue-btn-round"
+            to="/marketplace/cart/checkout"
+          >
+            Check Out
+          </Link>
+        </div>
       </div>
     </div>
   );

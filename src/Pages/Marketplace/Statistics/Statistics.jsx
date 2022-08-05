@@ -18,34 +18,38 @@ const statistics = () => {
   const [titleIndex, setTitleIndex] = useState(0);
 
   return (
-    <div className="font-inter pb-4 bg-blue-light">
-      <div className="pt-8 px-4 flex flex-row">
-        <span className="mr-2 font-medium text-white">Tampilkan</span>
-        <CustomDropdown state={show} setState={setShow} values={showValues} />
-      </div>
-      <div className="w-64 py-8 h-8 mx-auto flex flex-row items-center justify-between">
-        <button
-          onClick={() => {
-            titleIndex !== 0
-              ? setTitleIndex(titleIndex - 1)
-              : setTitleIndex(titleIndex);
-          }}
-        >
-          <ChevronLeft />
-        </button>
-        <div className="w-44 font-medium text-center">{titles[titleIndex]}</div>
-        <button
-          onClick={() => {
-            titleIndex < titles.length - 1
-              ? setTitleIndex(titleIndex + 1)
-              : setTitleIndex(titleIndex);
-          }}
-        >
-          <ChevronRight />
-        </button>
-      </div>
-      <div className="sm:w-[400px] sm:h-[400px] sm:mx-auto w-[100vmin] h-[100vmin] bg-white">
-        <Chart data={data[titleIndex]} stroke={lineColor[titleIndex]} />
+    <div className="bg-blue-light">
+      <div className="max-w-[700px] mx-auto font-inter pb-4">
+        <div className="pt-8 px-4 flex flex-row">
+          <span className="mr-2 font-medium text-white">Tampilkan</span>
+          <CustomDropdown state={show} setState={setShow} values={showValues} />
+        </div>
+        <div className="w-64 py-8 h-8 mx-auto flex flex-row items-center justify-between">
+          <button
+            onClick={() => {
+              titleIndex !== 0
+                ? setTitleIndex(titleIndex - 1)
+                : setTitleIndex(titleIndex);
+            }}
+          >
+            <ChevronLeft />
+          </button>
+          <div className="w-44 font-medium text-center">
+            {titles[titleIndex]}
+          </div>
+          <button
+            onClick={() => {
+              titleIndex < titles.length - 1
+                ? setTitleIndex(titleIndex + 1)
+                : setTitleIndex(titleIndex);
+            }}
+          >
+            <ChevronRight />
+          </button>
+        </div>
+        <div className="sm:w-[400px] sm:h-[400px] sm:mx-auto w-[100vmin] h-[100vmin] bg-white">
+          <Chart data={data[titleIndex]} stroke={lineColor[titleIndex]} />
+        </div>
       </div>
     </div>
   );

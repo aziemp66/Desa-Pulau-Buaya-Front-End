@@ -122,127 +122,131 @@ const order = () => {
   };
 
   return (
-    <div className="font-inter pb-4 bg-blue-light">
-      <div className="pt-8 pb-4 px-4 flex flex-row">
-        <span className="mr-2 font-medium text-white">Tampilkan</span>
-        <CustomDropdown state={show} setState={setShow} values={showValues} />
-      </div>
-      {selectedOrderItems.map((orderItemId, index) => {
-        const orderItem = orderItems[orderItemId];
-        return (
-          <div className="mb-4 pt-2 px-4 bg-white" key={index}>
-            <div className="pb-2 flex items-start justify-between">
-              <p className="flex-none text-sm font-medium">
-                {formatDate(orderItem.date)}
-              </p>
-              <div
-                className={
-                  (orderItem.status === "done" ? "" : "bg-blue-light ") +
-                  "flex-none py-0 px-2 text-sm font-normal blue-btn"
-                }
-              >
-                {translateStatusToIn(orderItem.status)}
-              </div>
-            </div>
-            <div className="[&>*]:py-2 divide-y-2 divide-blue-light">
-              <div>
-                <p className="font-medium">Pembeli:</p>
-                <p className="text-sm">{orderItem.name}</p>
-              </div>
-              <div>
-                <p className="text-slate-400 font-medium text-sm">
-                  Alamat Tujuan:
+    <div className="bg-blue-light">
+      <div className="max-w-[700px] mx-auto font-inter pb-4 bg-blue-light">
+        <div className="pt-8 pb-4 px-4 flex flex-row">
+          <span className="mr-2 font-medium text-white">Tampilkan</span>
+          <CustomDropdown state={show} setState={setShow} values={showValues} />
+        </div>
+        {selectedOrderItems.map((orderItemId, index) => {
+          const orderItem = orderItems[orderItemId];
+          return (
+            <div className="mb-4 pt-2 px-4 bg-white" key={index}>
+              <div className="pb-2 flex items-start justify-between">
+                <p className="flex-none text-sm font-medium">
+                  {formatDate(orderItem.date)}
                 </p>
-                <p className="leading-4 text-sm">{orderItem.address}</p>
+                <div
+                  className={
+                    (orderItem.status === "done" ? "" : "bg-blue-light ") +
+                    "flex-none py-0 px-2 text-sm font-normal blue-btn"
+                  }
+                >
+                  {translateStatusToIn(orderItem.status)}
+                </div>
               </div>
-              <div>
-                <table className="[&>*>*>*]:font-normal [&>*>*>*]:text-sm [&>*>*>*:nth-child(2)]:pl-4 table-auto border-spacing-14 text-left">
-                  <tbody>
-                    <tr>
-                      <th>Email:</th>
-                      <th>{orderItem.email}</th>
-                    </tr>
-                    <tr>
-                      <th>No. Telepon:</th>
-                      <th>{orderItem.phone}</th>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div>
-                <p className="font-medium">Pesanan:</p>
-                <div className="divide-y-2 divide-blue-light">
-                  {orderItem.order.map((item, index) => (
-                    <div
-                      className="flex flex-row items-start justify-start"
-                      key={index}
-                    >
-                      <div className="flex-1 flex flex-row">
-                        <div className="flex-none w-[50px] h-[50px] rounded-lg">
-                          <img src={item.image} alt="Gambar Produk" />
-                        </div>
-                        <div className="flex-1 p-2 text-sm flex flex-row align-start justify-between">
-                          <p className="flex-none w-[100px] mr-4 font-inter">
-                            {item?.name ? item.name : "Produk Tidak Ditemukan"}
-                          </p>
-                          <div className="flex-1 flex flex-row align-start justify-between">
-                            <p className="flex-none">{item.amount}</p>
-                            <p className="flex-none text-blue-dark">
-                              Rp {item.price.toLocaleString("in-ID")}
+              <div className="[&>*]:py-2 divide-y-2 divide-blue-light">
+                <div>
+                  <p className="font-medium">Pembeli:</p>
+                  <p className="text-sm">{orderItem.name}</p>
+                </div>
+                <div>
+                  <p className="text-slate-400 font-medium text-sm">
+                    Alamat Tujuan:
+                  </p>
+                  <p className="leading-4 text-sm">{orderItem.address}</p>
+                </div>
+                <div>
+                  <table className="[&>*>*>*]:font-normal [&>*>*>*]:text-sm [&>*>*>*:nth-child(2)]:pl-4 table-auto border-spacing-14 text-left">
+                    <tbody>
+                      <tr>
+                        <th>Email:</th>
+                        <th>{orderItem.email}</th>
+                      </tr>
+                      <tr>
+                        <th>No. Telepon:</th>
+                        <th>{orderItem.phone}</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div>
+                  <p className="font-medium">Pesanan:</p>
+                  <div className="divide-y-2 divide-blue-light">
+                    {orderItem.order.map((item, index) => (
+                      <div
+                        className="flex flex-row items-start justify-start"
+                        key={index}
+                      >
+                        <div className="flex-1 flex flex-row">
+                          <div className="flex-none w-[50px] h-[50px] rounded-lg">
+                            <img src={item.image} alt="Gambar Produk" />
+                          </div>
+                          <div className="flex-1 p-2 text-sm flex flex-row align-start justify-between">
+                            <p className="flex-1 w-[100px] mr-4 font-inter">
+                              {item?.name
+                                ? item.name
+                                : "Produk Tidak Ditemukan"}
                             </p>
+                            <div className="flex-1 flex flex-row align-start justify-between">
+                              <p className="flex-none">{item.amount}</p>
+                              <p className="flex-none text-blue-dark">
+                                Rp {item.price.toLocaleString("in-ID")}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div>
-                <p className="font-medium">Detail Pembayaran:</p>
-                <div className="flex items-center justify-between">
-                  <p className="text-sm">Subtotal</p>
-                  <p className="text-sm font-medium">Rp. {orderItem.price}</p>
+                <div>
+                  <p className="font-medium">Detail Pembayaran:</p>
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm">Subtotal</p>
+                    <p className="text-sm font-medium">Rp. {orderItem.price}</p>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <p className="font-medium">Status:</p>
-                <div className="flex items-center justify-start">
-                  <CustomDropdown
-                    state={translateStatusToIn(
-                      orderItemsTemporaryStatus[orderItemId]
-                    )}
-                    setState={(status) => {
-                      setOrderItemsTemporaryStatus({
-                        ...orderItemsTemporaryStatus,
-                        [orderItemId]: translateStatusToEng(status),
-                      });
-                    }}
-                    values={[
-                      ...orderItemStatusValues.map((status) =>
-                        translateStatusToIn(status)
-                      ),
-                    ]}
-                  />
-                  <button
-                    className="ml-4 py-0 text-sm blue-btn-inverted"
-                    onClick={() => {
-                      setOrderItems({
-                        ...orderItems,
-                        [orderItemId]: {
-                          ...orderItems[orderItemId],
-                          status: orderItemsTemporaryStatus[orderItemId],
-                        },
-                      });
-                    }}
-                  >
-                    Perbarui Status
-                  </button>
+                <div>
+                  <p className="font-medium">Status:</p>
+                  <div className="flex items-center justify-start">
+                    <CustomDropdown
+                      state={translateStatusToIn(
+                        orderItemsTemporaryStatus[orderItemId]
+                      )}
+                      setState={(status) => {
+                        setOrderItemsTemporaryStatus({
+                          ...orderItemsTemporaryStatus,
+                          [orderItemId]: translateStatusToEng(status),
+                        });
+                      }}
+                      values={[
+                        ...orderItemStatusValues.map((status) =>
+                          translateStatusToIn(status)
+                        ),
+                      ]}
+                    />
+                    <button
+                      className="ml-4 py-0 text-sm blue-btn-inverted"
+                      onClick={() => {
+                        setOrderItems({
+                          ...orderItems,
+                          [orderItemId]: {
+                            ...orderItems[orderItemId],
+                            status: orderItemsTemporaryStatus[orderItemId],
+                          },
+                        });
+                      }}
+                    >
+                      Perbarui Status
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
