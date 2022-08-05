@@ -13,7 +13,7 @@ const itemCounter = (props) => {
         <MinusIcon className="w-7 h-7" />
       </button>
       <input
-        className="flex-none w-12 text-center rounded-md border-2 border-blue-dark"
+        className="flex-none w-12 text-center appearance-none rounded-md border-2 border-blue-dark"
         type="number"
         value={props.state}
         onChange={(e) => {

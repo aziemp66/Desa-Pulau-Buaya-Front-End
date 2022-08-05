@@ -159,23 +159,25 @@ const marketplace = () => {
               <CancelIcon />
             </button>
           </div>
-          <div className="pt-12 pb-6 mx-auto w-36 flex flex-col">
-            <Link
-              className="flex-none mb-2 blue-btn-round-inverted"
-              to="/marketplace/signup"
-            >
-              Daftar
-            </Link>
-            <Link
-              className="flex-none py-1 blue-btn-round"
-              to="/marketplace/login"
-            >
-              Masuk
-            </Link>
-          </div>
-          <div className="flex flex-col [&>*]:p-2 [&>*]:font-medium divide-blue-light text-blue-light divide-y bg-white">
-            <Link to="/marketplace/statistics">Data Statistik</Link>
-            <Link to="/">Lihat Profil Desa</Link>
+          <div className="max-w-[700px] mx-auto">
+            <div className="pt-12 pb-6 mx-auto w-36 flex flex-col">
+              <Link
+                className="flex-none mb-2 blue-btn-round-inverted"
+                to="/marketplace/signup"
+              >
+                Daftar
+              </Link>
+              <Link
+                className="flex-none py-1 blue-btn-round"
+                to="/marketplace/login"
+              >
+                Masuk
+              </Link>
+            </div>
+            <div className="flex flex-col [&>*]:p-2 [&>*]:font-medium divide-blue-light text-blue-light divide-y bg-white">
+              <Link to="/marketplace/statistics">Data Statistik</Link>
+              <Link to="/">Lihat Profil Desa</Link>
+            </div>
           </div>
         </div>
       )}
