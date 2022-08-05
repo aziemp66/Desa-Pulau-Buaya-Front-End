@@ -38,7 +38,11 @@ const Navbar = ({ toggleShow, show }) => {
           <div className={`flex justify-center items-center`}>
             <BsThreeDots
               className={`w-10 h-10 cursor-pointer ${
-                !scrollDown ? "text-blue-dark lg:text-white" : "text-blue-dark"
+                !scrollDown
+                  ? `${
+                      !insideMarketPlace ? "text-blue-dark" : "text-white"
+                    } lg:text-white`
+                  : "text-blue-dark"
               } lg:absolute top-5 left-10 transition-all duration-300 ease-in-out ${
                 show && "lg:hidden"
               }`}
@@ -48,7 +52,11 @@ const Navbar = ({ toggleShow, show }) => {
           <div className="flex justify-center items-center w-full">
             <h1
               className={`text-xl ${
-                !scrollDown ? "text-blue-dark lg:text-white" : "text-blue-dark"
+                !scrollDown
+                  ? `${
+                      !insideMarketPlace ? "text-blue-dark" : "text-white"
+                    } lg:text-white`
+                  : "text-blue-dark"
               } font-noto-sans font-bold`}
             >
               Desa Pulau Buaya
