@@ -30,7 +30,7 @@ const Navbar = ({ toggleShow, show }) => {
           className={`flex flex-row w-screen h-[4.5rem] py-5 px-8 ${
             !insideMarketPlace
               ? `bg-cream-light ${
-                  !scrollDown ? "lg:bg-transparent" : "lg:bg-grayish-blue"
+                  !scrollDown ? "lg:bg-transparent" : "lg:bg-white-transparent"
                 } lg:absolute `
               : "bg-blue-dark border-b-2"
           }`}
