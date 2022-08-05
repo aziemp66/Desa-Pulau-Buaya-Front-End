@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 import logoUnpad from "../../../Assets/Logo/logo-unpad.svg";
 import logoBem from "../../../Assets/Logo/logo-bem.svg";
@@ -14,8 +15,17 @@ import linkedBlack from "../../../Assets/Icons/linked-black.svg";
 import mailBlack from "../../../Assets/Icons/mail-black.svg";
 
 const Footer = () => {
+  const location = useLocation();
+
+  const insideMarketPlace = location.pathname.includes("/marketplace");
+
   return (
-    <div className="flex flex-col items-center bg-cream-dark py-8 gap-8 text-sm">
+    <div
+      className={
+        (insideMarketPlace ? "bg-blue-dark text-white " : "bg-cream-dark ") +
+        "flex flex-col items-center py-8 gap-8 text-sm"
+      }
+    >
       <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start w-4/5">
         <div className="flex flex-col font-bold justify-center text-center lg:text-start">
           <h1 className="text-center lg:text-start text-white py-2 ">
