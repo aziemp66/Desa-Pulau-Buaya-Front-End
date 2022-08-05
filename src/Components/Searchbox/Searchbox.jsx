@@ -1,24 +1,22 @@
 import SearchIcon from "../../Assets/Icons/searchIcon.svg?component";
-import FilterIcon from "../../Assets/Icons/filterIcon.svg?component";
 
-const searchbox = () => {
+const searchbox = (props) => {
   return (
-    <div className="flex items-center justify-between">
-      <label className="flex-1 relative block">
-        <span className="absolute inset-y-0 left-0 pl-2 flex items-center">
-          <SearchIcon className="fill-blue-dark h-4" />
-        </span>
-        <input
-          className="focus:outline-blue-dark focus:ring-1 placeholder:text-slate-400 placeholder:text-sm placeholder:font-inter w-full block rounded-full border border-blue-dark py-1 pl-8 pr-3"
-          placeholder="Cari Produk..."
-          type="text"
-          name="search"
-        />
-      </label>
-      <button>
-        <FilterIcon className="h-8 fill-blue-dark" />
-      </button>
-    </div>
+    <label className="flex-1 relative block">
+      <span className="absolute inset-y-0 left-0 pl-2 flex items-center">
+        <SearchIcon className="fill-blue-dark h-4" />
+      </span>
+      <input
+        className="focus:outline-blue-dark focus:ring-1 placeholder:text-slate-400 placeholder:text-sm placeholder:font-inter w-full block rounded-full border border-blue-dark py-1 pl-8 pr-3"
+        placeholder="Cari Produk..."
+        type="text"
+        name="search"
+        value={props.state}
+        onChange={(e) => {
+          props.setState(e.target.value);
+        }}
+      />
+    </label>
   );
 };
 

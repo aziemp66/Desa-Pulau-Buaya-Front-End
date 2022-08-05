@@ -64,7 +64,7 @@
   }
 
   .blue-btn-inverted {
-    @apply px-2 py-1 text-center font-inter font-medium text-blue-dark rounded-lg bg-white border-2 border-blue-dark;
+    @apply px-2 py-1 font-semibold text-center font-inter text-blue-dark rounded-lg bg-white border-2 border-blue-dark;
   }
 
   .blue-btn-round {

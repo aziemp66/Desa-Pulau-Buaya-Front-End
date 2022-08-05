@@ -9,7 +9,12 @@ import About from "./Pages/About/About";
 import History from "./Pages/History/History";
 import HeadInfo from "./Pages/HeadInfo/HeadInfo";
 import Marketplace from "./Pages/Marketplace/Marketplace";
+import MarketplaceLogin from "./Pages/Marketplace/MarketplaceLogin/MarketplaceLogin";
+import MarketplaceSignIn from "./Pages/Marketplace/MarketplaceSignIn/MarketplaceSignIn";
+import MarketplaceProfile from "./Pages/Marketplace/MarketplaceProfile/MarketplaceProfile";
 import ProductView from "./Pages/Marketplace/ProductView/ProductView";
+import EditProduct from "./Pages/Marketplace/EditProduct/EditProduct";
+import AddProduct from "./Pages/Marketplace/AddProduct/AddProduct";
 import Cart from "./Pages/Marketplace/Cart/Cart";
 import Order from "./Pages/Marketplace/Order/Order";
 import Textile from "./Pages/Textile/Textile";
@@ -32,9 +37,14 @@ function App() {
           <Route path="/head-info" element={<HeadInfo />} />
           <Route path="/textile" element={<Textile />} />
           <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/marketplace/login" element={<MarketplaceLogin />} />
+          <Route path="/marketplace/signin" element={<MarketplaceSignIn />} />
+          <Route path="/marketplace/profile" element={<MarketplaceProfile />} />
           <Route path="/marketplace/view" element={<ProductView />} />
           <Route path="/marketplace/cart" element={<Cart />} />
           <Route path="/marketplace/order" element={<Order />} />
+          <Route path="/marketplace/product" element={<EditProduct />} />
+          <Route path="/marketplace/product/add" element={<AddProduct />} />
         </Routes>
         <Footer />
       </div>

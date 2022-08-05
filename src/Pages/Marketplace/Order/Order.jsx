@@ -141,7 +141,9 @@ const order = () => {
                 <p className="text-sm">{orderItem.name}</p>
               </div>
               <div>
-                <p className="text-slate-400 font-medium">Alamat:</p>
+                <p className="text-slate-400 font-medium text-sm">
+                  Alamat Tujuan:
+                </p>
                 <p className="leading-4 text-sm">{orderItem.address}</p>
               </div>
               <div>
