@@ -73,7 +73,7 @@ const Sidebar = ({ show, toggleShow }) => {
                 />
               </div>
             </li>
-            <div className="scale-0 h-0 group-hover:h-[150.4px] -translate-x-full group-hover:scale-100 group-hover:translate-x-0 transition-all duration-500">
+            <div className="scale-0 h-0 group-hover:h-[112px] -translate-x-full group-hover:scale-100 group-hover:translate-x-0 transition-all duration-500">
               <Link to={"/potential"}>
                 <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
                   <SiPowerbi />
@@ -90,12 +90,6 @@ const Sidebar = ({ show, toggleShow }) => {
                 <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
                   <ImOffice />
                   <span>Profil Aparatur</span>
-                </li>
-              </Link>
-              <Link to={"/vision-mission"}>
-                <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
-                  <SiFuturelearn />
-                  <span>Visi Dan Misi</span>
                 </li>
               </Link>
             </div>

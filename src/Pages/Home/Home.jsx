@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import mascotBoth from "../../Assets/Icons/mascot-both.svg";
 
-import GoogleMapReact from "google-map-react";
-
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 import photo1 from "../../Assets/car-1.jpg";
