@@ -15,11 +15,16 @@ import Marketplace from "./Pages/Marketplace/Marketplace";
 import MarketplaceLogin from "./Pages/Marketplace/MarketplaceLogin/MarketplaceLogin";
 import MarketplaceSignIn from "./Pages/Marketplace/MarketplaceSignIn/MarketplaceSignIn";
 import MarketplaceProfile from "./Pages/Marketplace/MarketplaceProfile/MarketplaceProfile";
+import MarketplaceUser from "./Pages/Marketplace/User/User";
+import MarketplaceAdmin from "./Pages/Marketplace/Admin/Admin";
 import ProductView from "./Pages/Marketplace/ProductView/ProductView";
-import EditProduct from "./Pages/Marketplace/EditProduct/EditProduct";
-import AddProduct from "./Pages/Marketplace/AddProduct/AddProduct";
+import ProductList from "./Pages/Marketplace/ProductList/ProductList";
+import ProductForm from "./Pages/Marketplace/ProductForm/ProductForm";
 import Cart from "./Pages/Marketplace/Cart/Cart";
+import Checkout from "./Pages/Marketplace/Checkout/Checkout";
 import Order from "./Pages/Marketplace/Order/Order";
+import OrderHistory from "./Pages/Marketplace/OrderHistory/OrderHistory";
+import Statistics from "./Pages/Marketplace/Statistics/Statistics";
 import Textile from "./Pages/Textile/Textile";
 
 function App() {
@@ -43,13 +48,25 @@ function App() {
           <Route path="/textile" element={<Textile />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/marketplace/login" element={<MarketplaceLogin />} />
-          <Route path="/marketplace/signin" element={<MarketplaceSignIn />} />
+          <Route path="/marketplace/signup" element={<MarketplaceSignIn />} />
           <Route path="/marketplace/profile" element={<MarketplaceProfile />} />
+          <Route path="/marketplace/user" element={<MarketplaceUser />} />
+          <Route path="/marketplace/admin" element={<MarketplaceAdmin />} />
           <Route path="/marketplace/view" element={<ProductView />} />
           <Route path="/marketplace/cart" element={<Cart />} />
+          <Route path="/marketplace/cart/checkout" element={<Checkout />} />
           <Route path="/marketplace/order" element={<Order />} />
-          <Route path="/marketplace/product" element={<EditProduct />} />
-          <Route path="/marketplace/product/add" element={<AddProduct />} />
+          <Route path="/marketplace/history" element={<OrderHistory />} />
+          <Route path="/marketplace/product" element={<ProductList />} />
+          <Route
+            path="/marketplace/product/add"
+            element={<ProductForm title="Tambah Produk" />}
+          />
+          <Route
+            path="/marketplace/product/edit"
+            element={<ProductForm title="Edit Produk" />}
+          />
+          <Route path="/marketplace/statistics" element={<Statistics />} />
         </Routes>
         <Footer />
       </div>

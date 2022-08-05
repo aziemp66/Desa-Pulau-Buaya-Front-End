@@ -3,7 +3,7 @@ import RectangleImageContainer from "../../../Components/RectangleImageContainer
 
 import jerukSegar from "../../../Assets/jerukSegar.jpeg";
 
-const editProduct = () => {
+const productList = () => {
   const data = [
     { id: "23102033", name: "Jeruk Segar", image: jerukSegar, price: 10000 },
     { id: "23102033", name: "Jeruk Segar", image: jerukSegar, price: 10000 },
@@ -37,9 +37,12 @@ const editProduct = () => {
             </div>
           </Link>
           <div className="pr-2 flex flex-col items-center justify-center">
-            <button className="w-20 mb-2 text-sm flex-none border-2 border-blue-dark blue-btn">
+            <Link
+              className="w-20 mb-2 text-sm flex-none border-2 border-blue-dark blue-btn"
+              to="/marketplace/product/edit"
+            >
               Edit
-            </button>
+            </Link>
             <button className="w-20 text-sm flex-none blue-btn-inverted">
               Hapus
             </button>
@@ -48,14 +51,14 @@ const editProduct = () => {
       ))}
       <div className="mt-8 w-full">
         <Link
-          to="/marketplace/product/add"
-          className="table mx-auto blue-btn-inverted"
+          to="/marketplace/admin"
+          className="table mx-auto py-1 px-8 blue-btn-round-inverted"
         >
-          Tambah Produk
+          Kembali
         </Link>
       </div>
     </div>
   );
 };
 
-export default editProduct;
+export default productList;

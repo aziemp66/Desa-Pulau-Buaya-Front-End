@@ -7,7 +7,7 @@ const customFileInput = (props) => {
     <div>
       <p className="mb-1 text-sm">{props.title}</p>
       <div>
-        <label htmlFor={fileInputId} className="text-sm blue-btn">
+        <label htmlFor={fileInputId} className="text-sm bg-blue-light blue-btn">
           {props.display}
         </label>
         <input
@@ -19,7 +19,9 @@ const customFileInput = (props) => {
           }}
           type="file"
         />
-        <span className="ml-2 text-sm">{props.state.name}</span>
+        <span className="ml-2 text-sm">
+          {props.state.name ? props.state.name : "Tidak Ada File Dipilih"}
+        </span>
       </div>
     </div>
   );

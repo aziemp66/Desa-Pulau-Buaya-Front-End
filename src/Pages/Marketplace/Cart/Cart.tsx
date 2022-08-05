@@ -1,4 +1,5 @@
 import { useId, useState, useReducer, useEffect } from "react";
+import { Link } from "react-router-dom";
 import CustomCheckbox from "../../../Components/CustomCheckbox/CustomCheckbox";
 import CartItem from "./CartItem/CartItem";
 
@@ -146,7 +147,12 @@ const cart = () => {
           <span className="mr-2 text-blue-light font-semibold">Rp</span>
           {totalPrice.toLocaleString("id-ID")}
         </div>
-        <button className="blue-btn-round">Check Out</button>
+        <Link
+          className="py-1 px-4 blue-btn-round"
+          to="/marketplace/cart/checkout"
+        >
+          Check Out
+        </Link>
       </div>
     </div>
   );

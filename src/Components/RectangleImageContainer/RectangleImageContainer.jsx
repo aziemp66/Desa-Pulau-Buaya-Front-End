@@ -7,7 +7,7 @@ const rectangleImageContainer = (props) => {
           <img
             className="max-w-full max-h-full my-auto"
             src={props.image}
-            alt="Gambar Produk Tidak Ditemukan"
+            alt="Gambar Tidak Ditemukan"
           />
         </div>
       </div>

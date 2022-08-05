@@ -29,7 +29,9 @@ const marketplaceLogin = () => {
           />
         </div>
         <div className="pb-6 px-2">
-          <button className="mb-2 blue-btn w-full">Masuk</button>
+          <Link className="table mb-2 blue-btn w-full" to="/marketplace/user">
+            Masuk
+          </Link>
           <div className="text-center text-slate-500">
             Belum Punya Akun?{" "}
             <Link className="text-blue-dark" to="/marketplace/signin">

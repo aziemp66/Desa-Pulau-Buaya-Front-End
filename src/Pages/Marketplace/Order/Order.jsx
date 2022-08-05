@@ -9,6 +9,8 @@ const order = () => {
   const [show, setShow] = useState("Semua");
   const showValues = ["Semua", "Dalam Proses", "Selesai"];
 
+  const [selectedOrderItems, setSelectedOrderItems] = useState([]);
+
   const [orderItemsLength, setOrderItemsLength] = useState(0);
   const [orderItems, setOrderItems] = useState({});
   const [orderItemsTemporaryStatus, setOrderItemsTemporaryStatus] = useState(
@@ -52,7 +54,6 @@ const order = () => {
   //utk development selesai
 
   const getData = (item) => {
-    console.log(item.id);
     const newState = {
       ...orderItems,
       [item.id]: {
@@ -66,8 +67,6 @@ const order = () => {
         price: item.price,
       },
     };
-    console.log("newState");
-    console.log(newState);
 
     setOrderItems(newState);
     setOrderItemsTemporaryStatus({
@@ -78,7 +77,7 @@ const order = () => {
 
   useEffect(() => {
     try {
-      getData(data[0]);
+      getData(data[orderItemsLength]);
       setOrderItemsLength(orderItemsLength + 1);
     } catch {}
   }, []);
@@ -88,6 +87,17 @@ const order = () => {
       setOrderItemsLength(orderItemsLength + 1);
     } catch {}
   }, [orderItems]);
+  useEffect(() => {
+    const selected = [];
+
+    Object.entries(orderItems).map((item) => {
+      if (translateStatusToIn(item[1].status) === show || show === "Semua") {
+        selected.push(item[0]);
+      }
+    });
+
+    setSelectedOrderItems(selected);
+  }, [orderItems, show]);
 
   const translateStatusToIn = (status) => {
     switch (status) {
@@ -117,9 +127,8 @@ const order = () => {
         <span className="mr-2 font-medium text-white">Tampilkan</span>
         <CustomDropdown state={show} setState={setShow} values={showValues} />
       </div>
-      {Object.entries(orderItems).map((orderItemKeyValue, index) => {
-        const orderItemId = orderItemKeyValue[0];
-        const orderItem = orderItemKeyValue[1];
+      {selectedOrderItems.map((orderItemId, index) => {
+        const orderItem = orderItems[orderItemId];
         return (
           <div className="mb-4 pt-2 px-4 bg-white" key={index}>
             <div className="pb-2 flex items-start justify-between">
