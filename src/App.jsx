@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./Utilities/Animation/Animation";
+
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Ui/Navbar/Navbar";
 import Sidebar from "./Components/Ui/Sidebar/Sidebar";
@@ -7,7 +9,7 @@ import Footer from "./Components/Ui/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import History from "./Pages/History/History";
-import HeadInfo from "./Pages/HeadInfo/HeadInfo";
+import HeadInfo from "./Pages/HeadInfo/ChiefInfo";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import MarketplaceLogin from "./Pages/Marketplace/MarketplaceLogin/MarketplaceLogin";
 import MarketplaceSignIn from "./Pages/Marketplace/MarketplaceSignIn/MarketplaceSignIn";
@@ -21,6 +23,7 @@ import Textile from "./Pages/Textile/Textile";
 
 function App() {
   const [show, setShow] = useState(false);
+
   return (
     <div className="flex">
       <Sidebar toggleShow={setShow} show={show} />

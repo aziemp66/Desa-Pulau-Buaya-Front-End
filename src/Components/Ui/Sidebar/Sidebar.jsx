@@ -60,52 +60,48 @@ const Sidebar = ({ show, toggleShow }) => {
               <span>Home</span>
             </li>
           </Link>
-          <div className="group flex flex-col relative">
-            <li
-              onClick={() => setShowProfileSub((prev) => !prev)}
-              className="hover:bg-blue-light w-full hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-between px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300"
-            >
+          <Link to={"/about"} className="group flex flex-col relative">
+            <li className="hover:bg-blue-light w-full hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-between px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
               <div className="flex gap-3 justify-center items-center">
                 <AiFillInfoCircle />
                 <span>Profil Desa</span>
               </div>
               <div>
                 <IoIosArrowUp
+                  onClick={() => setShowProfileSub((prev) => !prev)}
                   className={`${
                     !showProfileSub && "rotate-180"
-                  } transition duration-300 ease-in-out`}
+                  } transition duration-300 ease-in-out w-7 h-7`}
                 />
               </div>
             </li>
-            {showProfileSub && (
-              <div>
-                <Link to={"/potential"}>
-                  <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
-                    <SiPowerbi />
-                    <span>Potensi Desa</span>
-                  </li>
-                </Link>
-                <Link to={"/map"}>
-                  <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
-                    <BsFillMapFill />
-                    <span>Peta Desa</span>
-                  </li>
-                </Link>
-                <Link to={"/officials"}>
-                  <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
-                    <ImOffice />
-                    <span>Profil Aparatur</span>
-                  </li>
-                </Link>
-                <Link to={"/vision-mission"}>
-                  <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
-                    <SiFuturelearn />
-                    <span>Visi Dan Misi</span>
-                  </li>
-                </Link>
-              </div>
-            )}
-          </div>
+            <div className="invisible absolute -translate-x-full group-hover:visible group-hover:static group-hover:translate-x-0 transition duration-500">
+              <Link to={"/potential"}>
+                <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                  <SiPowerbi />
+                  <span>Potensi Desa</span>
+                </li>
+              </Link>
+              <Link to={"/map"}>
+                <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                  <BsFillMapFill />
+                  <span>Peta Desa</span>
+                </li>
+              </Link>
+              <Link to={"/officials"}>
+                <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                  <ImOffice />
+                  <span>Profil Aparatur</span>
+                </li>
+              </Link>
+              <Link to={"/vision-mission"}>
+                <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                  <SiFuturelearn />
+                  <span>Visi Dan Misi</span>
+                </li>
+              </Link>
+            </div>
+          </Link>
           <Link to={"/history"}>
             <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
               <AiOutlineHistory />
