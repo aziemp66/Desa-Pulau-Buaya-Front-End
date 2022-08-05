@@ -8,6 +8,7 @@ import Footer from "./Components/Ui/Footer/Footer";
 
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
+import Officials from "./Pages/About/Officials/Officials";
 import History from "./Pages/History/History";
 import ChiefInfo from "./Pages/ChiefInfo/ChiefInfo";
 import Marketplace from "./Pages/Marketplace/Marketplace";
@@ -36,6 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/officials" element={<Officials />} />
           <Route path="/history" element={<History />} />
           <Route path="/head-info" element={<ChiefInfo />} />
           <Route path="/textile" element={<Textile />} />

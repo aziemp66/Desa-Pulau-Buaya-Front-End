@@ -12,7 +12,7 @@ const About = () => {
           </h1>
         </div>
       </div>
-      <div className="w-4/5 lg:w-1/2 mx-auto py-12 lg:py-28 ">
+      <div className="w-4/5 lg:w-1/2 mx-auto py-12 lg:py-28">
         <article className="bg-cream-light flex flex-col justify-center items-center gap-4 lg:gap-8 text-sm lg:text-base">
           <p className="bg-inherit">
             Pulau Buaya merupakan salah satu desa yang ada di kecamatan Alor
