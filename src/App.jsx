@@ -9,7 +9,7 @@ import Footer from "./Components/Ui/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import History from "./Pages/History/History";
-import HeadInfo from "./Pages/HeadInfo/ChiefInfo";
+import ChiefInfo from "./Pages/ChiefInfo/ChiefInfo";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import MarketplaceLogin from "./Pages/Marketplace/MarketplaceLogin/MarketplaceLogin";
 import MarketplaceSignIn from "./Pages/Marketplace/MarketplaceSignIn/MarketplaceSignIn";
@@ -37,7 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/history" element={<History />} />
-          <Route path="/head-info" element={<HeadInfo />} />
+          <Route path="/head-info" element={<ChiefInfo />} />
           <Route path="/textile" element={<Textile />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/marketplace/login" element={<MarketplaceLogin />} />

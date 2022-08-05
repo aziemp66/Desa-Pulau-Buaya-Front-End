@@ -69,13 +69,11 @@ const Sidebar = ({ show, toggleShow }) => {
               <div>
                 <IoIosArrowUp
                   onClick={() => setShowProfileSub((prev) => !prev)}
-                  className={`${
-                    !showProfileSub && "rotate-180"
-                  } transition duration-300 ease-in-out w-7 h-7`}
+                  className={`group-hover:rotate-180 transition duration-300 ease-in-out w-7 h-7`}
                 />
               </div>
             </li>
-            <div className="invisible absolute -translate-x-full group-hover:visible group-hover:static group-hover:translate-x-0 transition duration-500">
+            <div className="scale-0 h-0 group-hover:h-[150.4px] -translate-x-full group-hover:scale-100 group-hover:translate-x-0 transition-all duration-500">
               <Link to={"/potential"}>
                 <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
                   <SiPowerbi />
