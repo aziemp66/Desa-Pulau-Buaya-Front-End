@@ -36,8 +36,10 @@ const Sidebar = ({ show, toggleShow }) => {
     >
       <div className="w-80 py-[21px] border-b-2 border-slate-200 px-6 border-r-2 ">
         <div className="flex justify-between items-center">
-          <div className="font-noto-sans font-bold text-xl text-center flex gap-2">
-            <BsThreeDotsVertical className="text-2xl" />
+          <div
+            className={`font-noto-sans font-bold text-xl text-center flex gap-2`}
+          >
+            <BsThreeDotsVertical className={`text-2xl`} />
             <span>Menu</span>
           </div>
           <div>
@@ -52,16 +54,20 @@ const Sidebar = ({ show, toggleShow }) => {
         <ul className="flex flex-col cursor-pointer ">
           <Link to={"/"}>
             <li
-              className={
-                "hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300"
-              }
+              className={`${
+                insideMarketPlace && "text-white"
+              } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
             >
               <AiFillHome />
               <span>Home</span>
             </li>
           </Link>
           <Link to={"/about"} className="group flex flex-col relative">
-            <li className="hover:bg-blue-light w-full hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-between px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
+            <li
+              className={`${
+                insideMarketPlace && "text-white"
+              } hover:bg-blue-light w-full hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-between px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
+            >
               <div className="flex gap-3 justify-center items-center">
                 <AiFillInfoCircle />
                 <span>Profil Desa</span>
@@ -75,19 +81,31 @@ const Sidebar = ({ show, toggleShow }) => {
             </li>
             <div className="scale-0 h-0 group-hover:h-[112px] -translate-x-full group-hover:scale-100 group-hover:translate-x-0 transition-all duration-500">
               <Link to={"/potential"}>
-                <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                <li
+                  className={`${
+                    !insideMarketPlace ? "text-slate-600" : "text-white"
+                  } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300`}
+                >
                   <SiPowerbi />
                   <span>Potensi Desa</span>
                 </li>
               </Link>
               <Link to={"/map"}>
-                <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                <li
+                  className={`${
+                    !insideMarketPlace ? "text-slate-600" : "text-white"
+                  } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300`}
+                >
                   <BsFillMapFill />
                   <span>Peta Desa</span>
                 </li>
               </Link>
               <Link to={"/officials"}>
-                <li className="text-slate-600 hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300">
+                <li
+                  className={`${
+                    !insideMarketPlace ? "text-slate-600" : "text-white"
+                  } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 transition duration-300`}
+                >
                   <ImOffice />
                   <span>Profil Aparatur</span>
                 </li>
@@ -95,35 +113,51 @@ const Sidebar = ({ show, toggleShow }) => {
             </div>
           </Link>
           <Link to={"/history"}>
-            <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
+            <li
+              className={`${
+                insideMarketPlace && "text-white"
+              } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
+            >
               <AiOutlineHistory />
               <span>Sejarah Desa</span>
             </li>
           </Link>
           <Link to={"/textile"}>
             <li
-              className={
-                "hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300"
-              }
+              className={`${
+                insideMarketPlace && "text-white"
+              } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
             >
               <GiSewingNeedle />
               <span>Potret Kain tenun</span>
             </li>
           </Link>
           <Link to={"/head-info"}>
-            <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
+            <li
+              className={`${
+                insideMarketPlace && "text-white"
+              } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
+            >
               <GiVillage />
               <span>Info Kepala Desa</span>
             </li>
           </Link>
           <Link to={"/marketplace"}>
-            <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
+            <li
+              className={`${
+                insideMarketPlace && "text-white"
+              } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
+            >
               <AiFillShop />
               <span>Marketplace</span>
             </li>
           </Link>
           <Link to={"/statistics"}>
-            <li className="hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300">
+            <li
+              className={`${
+                insideMarketPlace && "text-white"
+              } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
+            >
               <ImStatsBars />
               <span>Data Statistik</span>
             </li>
