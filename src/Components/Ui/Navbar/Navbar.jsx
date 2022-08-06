@@ -66,9 +66,13 @@ const Navbar = ({ toggleShow, show }) => {
             <h1
               className={`mr-4 flex-1 text-xl 
                 ${
-                  !insideMarketPlace
-                    ? "text-center text-blue-dark"
-                    : "text-white"
+                  !scrollDown
+                    ? `${
+                        !insideMarketPlace
+                          ? "text-center text-white"
+                          : "text-white"
+                      }`
+                    : "text-center text-blue-dark"
                 }
               font-noto-sans font-bold`}
             >
