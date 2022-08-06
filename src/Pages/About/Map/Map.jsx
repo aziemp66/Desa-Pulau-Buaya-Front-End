@@ -3,7 +3,7 @@ import React from "react";
 const Map = () => {
   return (
     <div className="bg-cream-light flex flex-col">
-      <div className="bg-[url('./src/Assets/bg-about.jpg')] bg-no-repeat bg-center bg-cover relative w-screen h-[35rem]">
+      <div className="bg-[url('./src/Assets/bg-about.jpg')] bg-no-repeat bg-center bg-cover relative w-full h-[35rem]">
         <div className="bg-[rgba(0,0,0,0.25)] absolute w-full h-full flex justify-center gap-4 items-center flex-col ">
           <h1 className="text-white text-center text-xl lg:text-6xl lg:w-1/2 leading-20 font-noto-sans font-bold">
             Profil Desa Pulau Buaya

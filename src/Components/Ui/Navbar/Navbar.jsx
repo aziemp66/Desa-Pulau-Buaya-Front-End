@@ -27,7 +27,7 @@ const Navbar = ({ toggleShow, show }) => {
     <div className={`flex sticky z-10 top-0 flex-row bg-white`}>
       <div className="flex flex-col">
         <div
-          className={`flex flex-row w-screen h-[4.5rem] py-5 px-8 ${
+          className={`flex flex-row w-full h-[4.5rem] py-5 px-8 ${
             !insideMarketPlace
               ? `bg-cream-light ${
                   !scrollDown ? "lg:bg-transparent" : "lg:bg-white-transparent"
@@ -67,7 +67,7 @@ const Navbar = ({ toggleShow, show }) => {
           <div className="lg:hidden bg-cream-light text-blue-dark">
             <div
               onClick={() => toggleShow((prev) => !prev)}
-              className={`w-screen bg-cream-light absolute`}
+              className={`w-full bg-cream-light absolute`}
             >
               <ul className="flex flex-col cursor-pointer ">
                 <Link to={"/"}>
@@ -106,7 +106,7 @@ const Navbar = ({ toggleShow, show }) => {
                     <span>Marketplace</span>
                   </li>
                 </Link>
-                <Link to={"/textile"}>
+                <Link to={"/marketplace/statistics"}>
                   <li className="font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-1 gap-3 border-b-2 border-slate-300 ">
                     <ImStatsBars />
                     <span>Statistik</span>

@@ -3,7 +3,7 @@ import React from "react";
 const History = () => {
   return (
     <div className="bg-cream-light flex flex-col">
-      <div className="bg-[url('./src/Assets/bg-sejarah.jpg')] bg-no-repeat bg-center bg-cover relative w-screen h-[35rem]">
+      <div className="bg-[url('./src/Assets/bg-sejarah.jpg')] bg-no-repeat bg-center bg-cover relative w-full h-[35rem]">
         <div className="bg-[rgba(0,0,0,0.25)] absolute w-full h-full flex justify-center gap-4 items-center flex-col ">
           <h1 className="text-white text-center text-3xl lg:text-6xl font-noto-sans font-bold">
             Sejarah Desa Pulau Buaya

@@ -28,7 +28,7 @@ const Sidebar = ({ show, toggleShow }) => {
 
   return (
     <div
-      className={`hidden lg:block sticky top-0 ${
+      className={`hidden lg:block lg:sticky lg:top-0 ${
         !insideMarketPlace ? "bg-cream-light" : "bg-blue-dark"
       } h-screen gap-32 ${
         !show && "lg:-translate-x-full"
@@ -79,7 +79,7 @@ const Sidebar = ({ show, toggleShow }) => {
                 />
               </div>
             </li>
-            <div className="scale-0 h-0 group-hover:h-[112px] -translate-x-full group-hover:scale-100 group-hover:translate-x-0 transition-all duration-500">
+            <div className="scale-0 h-0 group-hover:h-[112px] -translate-x-full group-hover:scale-100 group-hover:translate-x-0 transition-all duration-500 [&>*]:mt-0">
               <Link to={"/potential"}>
                 <li
                   className={`${
@@ -152,7 +152,7 @@ const Sidebar = ({ show, toggleShow }) => {
               <span>Marketplace</span>
             </li>
           </Link>
-          <Link to={"/statistics"}>
+          <Link to={"/marketplace/statistics"}>
             <li
               className={`${
                 insideMarketPlace && "text-white"

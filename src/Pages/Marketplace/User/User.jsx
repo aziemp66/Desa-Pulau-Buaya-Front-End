@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import CancelIcon from "../../../Assets/Icons/cancel-icon.svg?component";
 
 const user = () => (
-  <div className="relative bg-blue-light w-[100vw] h-[100vh]">
+  <div className="relative bg-blue-light w-full h-[100vh]">
     <div className="max-w-[700px] mx-auto">
       <div className="px-4 pt-8">
         <p className="text-lg">Selamat Datang,</p>

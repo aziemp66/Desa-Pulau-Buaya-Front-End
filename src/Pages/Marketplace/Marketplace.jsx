@@ -195,7 +195,7 @@ const marketplace = () => {
           )}
         </div>
       ) : (
-        <div className="relative w-[100vw] h-[100vh]">
+        <div className="relative w-full h-[100vh]">
           <div className="absolute top-5 right-5">
             <button
               onClick={() => {

@@ -75,6 +75,9 @@
     @apply px-3 text-blue-dark text-center font-inter font-medium bg-white border border-blue-dark rounded-full;
   }
 }
+* {
+  /* border: 1px solid red; */
+}
 
 html {
   margin: 0;
