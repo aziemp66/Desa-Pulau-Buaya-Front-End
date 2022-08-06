@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import UserIcon from "../../../Assets/Icons/user.svg?component";
+import BurgerIcon from "../../../Assets/Icons/burger.svg?component";
+import CartIcon from "../../../Assets/Icons/cart.svg?component";
 
 import {
   AiFillHome,
@@ -25,7 +28,7 @@ const Navbar = ({ toggleShow, show }) => {
 
   return (
     <div className={`flex sticky z-10 top-0 flex-row bg-white`}>
-      <div className="flex flex-col">
+      <div className="w-full flex flex-col">
         <div
           className={`flex flex-row w-full h-[4.5rem] py-5 px-8 ${
             !insideMarketPlace
@@ -35,23 +38,33 @@ const Navbar = ({ toggleShow, show }) => {
               : "bg-blue-dark border-b-2"
           }`}
         >
-          <div className={`flex justify-center items-center`}>
-            <BsThreeDots
-              className={`w-10 h-10 cursor-pointer ${
-                !scrollDown
-                  ? `${
-                      !insideMarketPlace ? "text-blue-dark" : "text-white"
-                    } lg:text-white`
-                  : "text-blue-dark"
-              } lg:absolute top-5 left-10 transition-all duration-300 ease-in-out ${
-                show && "lg:hidden"
-              }`}
-              onClick={() => toggleShow((prev) => !prev)}
-            />
-          </div>
-          <div className="flex justify-center items-center w-full">
+          <div className={`w-full flex justify-center items-center`}>
+            <div className="flex-none mr-4">
+              {insideMarketPlace ? (
+                <button
+                  className={`flex items-center justify-center w-8 h-8 bg-white rounded-lg ${
+                    show && "lg:hidden"
+                  }`}
+                  onClick={() => toggleShow((prev) => !prev)}
+                >
+                  <BurgerIcon />
+                </button>
+              ) : (
+                <BsThreeDots
+                  className={`w-10 h-10 cursor-pointer ${
+                    !scrollDown
+                      ? `${
+                          !insideMarketPlace ? "text-blue-dark" : "text-white"
+                        } lg:text-white`
+                      : "text-blue-dark"
+                  } ${show && "lg:hidden"}`}
+                  onClick={() => toggleShow((prev) => !prev)}
+                />
+              )}
+            </div>
+
             <h1
-              className={`text-xl ${
+              className={`mr-4 flex-1 text-xl ${
                 !scrollDown
                   ? `${
                       !insideMarketPlace ? "text-blue-dark" : "text-white"
@@ -61,6 +74,22 @@ const Navbar = ({ toggleShow, show }) => {
             >
               Desa Pulau Buaya
             </h1>
+            {insideMarketPlace && (
+              <div className="flex-none flex items-center justify-between">
+                <Link
+                  className="mr-4 flex items-center justify-center w-8 h-8 bg-white rounded-lg"
+                  to="/marketplace/profile"
+                >
+                  <UserIcon />
+                </Link>
+                <Link
+                  className="flex items-center justify-center w-8 h-8 bg-white rounded-lg"
+                  to="/marketplace/cart"
+                >
+                  <CartIcon />
+                </Link>
+              </div>
+            )}
           </div>
         </div>
         {show && (
