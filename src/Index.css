@@ -94,3 +94,29 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* utk scrollbar overflow-y */
+.scrollbar::webkit-scrollbar-track {
+}
+
+.scrollbar::-webkit-scrollbar {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  @apply bg-blue-dark;
+}
+
+.scrollbar::-webkit-scrollbar-button:end:increment {
+  width: 35%;
+  display: block;
+  @apply bg-blue-light;
+}
+
+.scrollbar::-webkit-scrollbar-button:start:increment {
+  width: 35%;
+  display: block;
+  @apply bg-blue-light;
+}
