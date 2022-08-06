@@ -35,11 +35,7 @@ function App() {
   return (
     <div className="flex">
       <Sidebar toggleShow={setShow} show={show} />
-      <div
-        className={`transition-all duration-500 ease-in-out ${
-          !show && "lg:-translate-x-80"
-        }`}
-      >
+      <div>
         <Navbar toggleShow={setShow} show={show} />
         <Routes>
           <Route path="/" element={<Home />} />

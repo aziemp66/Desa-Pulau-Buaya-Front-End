@@ -28,7 +28,7 @@ const Sidebar = ({ show, toggleShow }) => {
 
   return (
     <div
-      className={`hidden lg:block sticky top-0 ${
+      className={`hidden lg:block fixed h-full z-20 top-0 ${
         !insideMarketPlace ? "bg-cream-light" : "bg-blue-dark"
       } h-screen gap-32 ${
         !show && "lg:-translate-x-full"
