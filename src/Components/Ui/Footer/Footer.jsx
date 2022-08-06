@@ -1,18 +1,19 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import RectangleImageContainer from "../../RectangleImageContainer/RectangleImageContainer";
 
 import logoUnpad from "../../../Assets/Logo/logo-unpad.svg";
 import logoBem from "../../../Assets/Logo/logo-bem.svg";
 import logoEkspad from "../../../Assets/Logo/logo-ekspad.svg";
 import logoKabinet from "../../../Assets/Logo/logo-kabinet.svg";
 
-import instaBlack from "../../../Assets/Icons/insta-black.svg";
-import twitterBlack from "../../../Assets/Icons/twitter-black.svg";
-import lineBlack from "../../../Assets/Icons/line-black.svg";
-import netBlack from "../../../Assets/Icons/net-black.svg";
-import ytBlack from "../../../Assets/Icons/yt-black.svg";
-import linkedBlack from "../../../Assets/Icons/linked-black.svg";
-import mailBlack from "../../../Assets/Icons/mail-black.svg";
+import InstaIcon from "../../../Assets/Icons/instagram.svg?component";
+import TwitterIcon from "../../../Assets/Icons/twitter.svg?component";
+import LineIcon from "../../../Assets/Icons/line.svg?component";
+import NetIcon from "../../../Assets/Icons/net.svg?component";
+import YtIcon from "../../../Assets/Icons/yt.svg?component";
+import LinkedIcon from "../../../Assets/Icons/linked.svg?component";
+import MailIcon from "../../../Assets/Icons/mail.svg?component";
 
 const Footer = () => {
   const location = useLocation();
@@ -27,60 +28,63 @@ const Footer = () => {
       }
     >
       <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start w-4/5">
-        <div className="flex flex-col font-bold justify-center text-center lg:text-start">
-          <h1 className="text-center lg:text-start text-white py-2 ">
-            Tentang Kami:
-          </h1>
-          <ul className="">
-            <li>BEM Kema Unpad</li>
-            <li>Ekspedisi Padjadjaran</li>
-          </ul>
-        </div>
-        <div className="flex flex-col gap-4 w-[1/2]">
-          <div className="flex justify-between items-center">
-            <img
-              className="w-16 lg:w-20 h-auto"
-              src={logoUnpad}
-              alt="logo-unpad"
-            />
-            <img className="w-16 lg:w-20 h-auto" src={logoBem} alt="logo-bem" />
-            <img
-              className="w-16 lg:w-20 h-auto"
-              src={logoEkspad}
-              alt="logo-ekspad"
-            />
-            <img
-              className="w-16 lg:w-20 h-auto"
-              src={logoKabinet}
-              alt="logo-kabinet"
-            />
+        <div className="flex flex-col sm:flex-row font-bold sm:items-start items-center justify-between text-center lg:text-start w-full">
+          <div className="mb-4">
+            <h1 className="text-center sm:text-start text-white py-2 ">
+              Tentang Kami:
+            </h1>
+            <ul className="[&>*]:text-center sm:[&>*]:text-left">
+              <li>BEM Kema Unpad</li>
+              <li>Ekspedisi Padjadjaran</li>
+            </ul>
           </div>
-          <div className="text-center text-white font-bold">
-            <h3>Bem Kema Unpad 2022</h3>
-            <p>Kabinet Garis Depan</p>
-          </div>
-          <div className="hidden lg:flex gap-2">
-            <a href="/">
-              <img src={instaBlack} alt="insta" />
-            </a>
-            <a href="/">
-              <img src={twitterBlack} alt="twitter" />
-            </a>
-            <a href="/">
-              <img src={lineBlack} alt="line" />
-            </a>
-            <a href="/">
-              <img src={netBlack} alt="net" />
-            </a>
-            <a href="/">
-              <img src={ytBlack} alt="yt" />
-            </a>
-            <a href="/">
-              <img src={linkedBlack} alt="linked" />
-            </a>
-            <a href="/">
-              <img src={mailBlack} alt="mail" />
-            </a>
+          <div className="flex flex-col max-w-full gap-4">
+            <div className="flex max-w-[240px] flex-row justify-between items-center">
+              <div className="flex-1">
+                <RectangleImageContainer size="60px" image={logoUnpad} />
+              </div>
+              <div className="flex-1">
+                <RectangleImageContainer size="60px" image={logoBem} />
+              </div>
+              <div className="flex-1">
+                <RectangleImageContainer size="60px" image={logoEkspad} />
+              </div>
+              <div className="flex-1">
+                <RectangleImageContainer size="60px" image={logoKabinet} />
+              </div>
+            </div>
+            <div className="text-center sm:text-left text-white font-bold">
+              <h3>Bem Kema Unpad 2022</h3>
+              <p>Kabinet Garis Depan</p>
+            </div>
+            <div
+              className={
+                (insideMarketPlace ? "[&>a>*]:fill-white " : "") +
+                "hidden sm:flex gap-2"
+              }
+            >
+              <a href="/">
+                <InstaIcon />
+              </a>
+              <a href="/">
+                <TwitterIcon />
+              </a>
+              <a href="/">
+                <LineIcon />
+              </a>
+              <a href="/">
+                <NetIcon />
+              </a>
+              <a href="/">
+                <YtIcon />
+              </a>
+              <a href="/">
+                <LinkedIcon />
+              </a>
+              <a href="/">
+                <MailIcon />
+              </a>
+            </div>
           </div>
         </div>
       </div>
