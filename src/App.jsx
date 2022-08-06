@@ -33,9 +33,9 @@ function App() {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="transition-transform duration-500 ease-in-out flex flex-row items-start justify-start">
-      {show && <Sidebar toggleShow={setShow} show={show} />}
-      <div className="w-full">
+    <div className="">
+      <Sidebar toggleShow={setShow} show={show} />
+      <div>
         <Navbar toggleShow={setShow} show={show} />
         <Routes>
           <Route path="/" element={<Home />} />
