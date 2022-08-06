@@ -33,7 +33,7 @@ function App() {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="flex">
+    <div className="">
       <Sidebar toggleShow={setShow} show={show} />
       <div>
         <Navbar toggleShow={setShow} show={show} />
