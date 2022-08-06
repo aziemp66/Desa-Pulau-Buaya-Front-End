@@ -64,13 +64,9 @@ const Navbar = ({ toggleShow, show }) => {
             </div>
 
             <h1
-              className={`mr-4 flex-1 text-xl ${
-                !scrollDown
-                  ? `${
-                      !insideMarketPlace ? "text-blue-dark" : "text-white"
-                    } lg:text-white`
-                  : "text-blue-dark"
-              } font-noto-sans font-bold`}
+              className={`mr-4 flex-1 text-xl 
+                ${!insideMarketPlace ? "text-blue-dark" : "text-white"}
+              font-noto-sans font-bold`}
             >
               Desa Pulau Buaya
             </h1>
