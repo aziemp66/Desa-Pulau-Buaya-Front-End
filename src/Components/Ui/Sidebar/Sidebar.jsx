@@ -168,69 +168,50 @@ const Sidebar = ({ show, toggleShow }) => {
           </div>
         </>
       ) : (
-        <div className="">
-          <div>
-            <ul className="flex flex-col cursor-pointer ">
-              <Link to={"/about"} className="group flex flex-col relative">
-                <li
-                  className={`${
-                    insideMarketPlace && "text-white"
-                  } hover:bg-blue-light w-full hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-between px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
-                >
-                  <div className="flex gap-3 justify-center items-center">
-                    <AiFillInfoCircle />
-                    <span>Profil Desa</span>
-                  </div>
-                  <div>
-                    <IoIosArrowUp
-                      onClick={() => setShowProfileSub((prev) => !prev)}
-                      className={`group-hover:rotate-180 transition duration-300 ease-in-out w-7 h-7`}
-                    />
-                  </div>
-                </li>
-              </Link>
-              <Link to={"/textile"}>
-                <li
-                  className={`${
-                    insideMarketPlace && "text-white"
-                  } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
-                >
-                  <GiSewingNeedle />
-                  <span>Potret Kain tenun</span>
-                </li>
-              </Link>
-              <Link to={"/head-info"}>
-                <li
-                  className={`${
-                    insideMarketPlace && "text-white"
-                  } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
-                >
-                  <GiVillage />
-                  <span>Info Kepala Desa</span>
-                </li>
-              </Link>
-              <Link to={"/marketplace"}>
-                <li
-                  className={`${
-                    insideMarketPlace && "text-white"
-                  } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
-                >
-                  <AiFillShop />
-                  <span>Marketplace</span>
-                </li>
-              </Link>
-              <Link to={"/marketplace/statistics"}>
-                <li
-                  className={`${
-                    insideMarketPlace && "text-white"
-                  } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
-                >
-                  <ImStatsBars />
-                  <span>Data Statistik</span>
-                </li>
-              </Link>
-            </ul>
+        <div className="relative">
+          <div className="absolute top-4 right-4">
+            <AiOutlineClose
+              className="text-2xl cursor-pointer font-black"
+              onClick={toggle}
+            />
           </div>
+          <div className="w-[280px] py-4 px-4 font-bold text-2xl text-white">
+            Marketplace Desa Pulau Buaya
+          </div>
+          <ul className="flex flex-col cursor-pointer ">
+            <Link to={"/marketplace"}>
+              <li
+                className={`${
+                  insideMarketPlace && "text-white"
+                } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
+              >
+                <AiFillShop />
+                <span>Beranda</span>
+              </li>
+            </Link>
+            <Link to={"/marketplace/statistics"}>
+              <li
+                className={`${
+                  insideMarketPlace && "text-white"
+                } hover:bg-blue-light hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-start px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
+              >
+                <ImStatsBars />
+                <span>Lihat Statistik</span>
+              </li>
+            </Link>
+            <Link to={"/about"} className="group flex flex-col relative">
+              <li
+                className={`${
+                  insideMarketPlace && "text-white"
+                } hover:bg-blue-light w-full hover:text-cream-light font-noto-sans font-semibold text-lg flex items-center justify-between px-10 py-3 gap-3 border-b-2 border-slate-300 transition duration-300`}
+              >
+                <div className="flex gap-3 justify-center items-center">
+                  <AiFillInfoCircle />
+                  <span>Lihat Profil Desa</span>
+                </div>
+              </li>
+            </Link>
+          </ul>
         </div>
       )}
     </div>

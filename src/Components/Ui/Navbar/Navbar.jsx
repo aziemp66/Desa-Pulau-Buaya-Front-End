@@ -65,7 +65,11 @@ const Navbar = ({ toggleShow, show }) => {
 
             <h1
               className={`mr-4 flex-1 text-xl 
-                ${!insideMarketPlace ? "text-blue-dark" : "text-white"}
+                ${
+                  !insideMarketPlace
+                    ? "text-center text-blue-dark"
+                    : "text-white"
+                }
               font-noto-sans font-bold`}
             >
               Desa Pulau Buaya
